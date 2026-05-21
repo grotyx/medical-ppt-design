@@ -101,7 +101,14 @@ The logo file itself is not redistributed in this repository.
 
 ## License
 
-This design system is published for reference and reuse within academic medical presentation contexts. Coordinates, color tokens, and pattern definitions are free to adapt. SNUBH brand assets (logo, institutional marks) remain property of Seoul National University Bundang Hospital and are not licensed for redistribution.
+This work is licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)** — see [`LICENSE`](./LICENSE) or <https://creativecommons.org/licenses/by/4.0/>.
+
+You are free to share and adapt the material for any purpose, including commercially, provided you give appropriate credit.
+
+**Exclusion — SNUBH brand assets.** The Seoul National University Bundang Hospital logo, institutional marks, and any related trademarks embedded in `backbone_slides.pptx` are **not** covered by this license. Those assets remain the property of Seoul National University Bundang Hospital and may not be redistributed, sublicensed, or used in derivative works without separate permission from SNUBH. When reusing this template, replace the SNUBH logo and institutional identifiers with your own.
+
+**Suggested attribution:**
+> Park S-M. *Medical PPT Design System.* CC BY 4.0. <https://github.com/grotyx/medical-ppt-design>
 
 ---
 
