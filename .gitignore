@@ -1,0 +1,16 @@
+# Backups
+*_bak_*
+*.bak
+
+# Samples & working files (not part of the published design system)
+sample.pptx
+sample2.pptx
+backbone_slides_new.pptx
+slide-*.jpg
+logo.png
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
