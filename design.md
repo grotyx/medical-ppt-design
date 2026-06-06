@@ -29,25 +29,23 @@ SNUBH (Seoul National University Bundang Hospital) logo only. Place at the **top
 
 ### Slide Skeleton — Locked Positions Across the Deck
 
-Every slide must place these **five zones** at identical coordinates. Only the body contents change between slides — never the frame.
+Every slide must place these **four zones** at identical coordinates. Only the body contents change between slides — never the frame.
 
-> **⚠️ These coordinates are measured from the actual production file (backbone_slides.pptx, slides 1 & 3, user-edited May 2026). Treat as ground truth.**
+> **⚠️ These coordinates are measured from the final production file (GSC2026_full_modify_psm.pptx — final deck), cross-checked against backbone_slides.pptx, June 2026. Treat as ground truth.**
 
 | Zone | x | y | w | h | Contents | Style |
 |---|---|---|---|---|---|---|
 | **Header strip** | `0.1512"` | `0.135"` | `6.0"` (left) | `0.28"` | Chapter / section name (left), SNUBH logo (right) | Chapter: Pretendard 600, 11pt, `#8e8e93`, `-0.01em` (no extra tracking). Caps allowed in EN; do NOT apply additional `+0.05em` letter-spacing for caps. Logo: see Logo Integrity Rule |
-| **Headline zone** | `0.2752"` | `0.4771"` | `11.0"` | `0.50"` | Slide headline — one-sentence takeaway | Pretendard 700, **32pt**, `#006241` (Starbucks Green), line-height 1.20, letter-spacing `-0.01em` |
-| **Subtitle zone** | `0.2752"` | `1.0335"` | `12.3"` | `0.27"` | Subtitle / subhead | Pretendard 500, 12pt, `rgba(0,0,0,0.58)`, line-height 1.45, letter-spacing `-0.01em` |
+| **Headline zone** | `0.2752"` | `0.4771"` | `12.0"` | `0.50"` | Slide headline — one-sentence takeaway | Pretendard 700, **30pt**, `#006241` (Starbucks Green), line-height 1.20, letter-spacing `-0.01em` |
 | **Body box (white card)** | `0.2752"` | `1.4111"` | `12.7946"` | `5.7167"` | All body components — see §5 | White (`#ffffff`) card, 12px radius, whisper shadow |
 | **Footer — page number** | `0.1512"` | `7.24"` | `0.6"` | `0.25"` | Page number | Pretendard 500, 9pt, `#8e8e93` |
 | **Footer — source** | `7.1822"` | `7.2369"` | `6.0"` | `0.25"` | Source / footnote | Pretendard 400, 8pt, `#8e8e93`, right-aligned |
 
 **Vertical rhythm (measured gaps):**
 - Header strip → Headline: ≈0.34" gap (header bottom at ~0.415", headline top at 0.4771")
-- Headline → Subtitle: ≈0.056" gap (headline bottom ~0.977", subtitle top 1.0335")
-- Subtitle → Body card: ≈0.38" gap (subtitle bottom ~1.303", card top 1.4111")
+- Headline → Body card: ≈0.43" gap (headline bottom ~0.977", card top 1.4111")
 
-**Lock rule:** Five zones do not move between slides. Override only for section dividers, full-bleed covers, and closing slides.
+**Lock rule:** Four zones do not move between slides. Override only for section dividers, full-bleed covers, and closing slides.
 
 **Hard boundary:** Body card runs 1.4111"–7.1278" (card top + height = 1.4111+5.7167). Footer clearance begins at ~7.24". Content must not overflow the white card.
 
@@ -80,18 +78,18 @@ These values are fixed across all slide decks. Do not substitute other names unl
 
 The cover slide uses a full-bleed **House Green (`#1E3932`)** background with the following fixed zones.
 
-> **⚠️ All coordinates measured from actual production file (backbone_slides.pptx, slide 1, user-edited May 2026). Treat as ground truth.**
+> **⚠️ All coordinates measured from the final production file (GSC2026_full_modify_psm.pptx, slide 1, June 2026). Treat as ground truth.**
 
 | Zone | x | y | w | h | Font | Color |
 |---|---|---|---|---|---|---|
-| **Logo** | `SW − 1.7887"` (right-anchored) | `0.16"` | `1.2887"` | `0.8519"` | — | transparent PNG |
-| **Label pill** | `0.6"` | `1.11"` | `2.7874"` | `0.49"` | Pretendard 700, **14pt** | White `#FFFFFF` on Green Accent fill |
-| **Main title** | `0.6"` | `2.0775"` | `9.0"` | `1.8225"` | Pretendard 700, **54pt** | White `#FFFFFF` |
-| **Subtitle (study descriptor)** | `0.6"` | `4.3"` | `9.0"` | `0.38"` | Pretendard 700, **20pt** | `#B3D4CB` |
-| **Green accent line** | `0.6"` | `5.05"` | `1.8"` | `0.04"` | — | Green Accent `#00754A` |
-| **Affiliation (BR, top)** | `7.5093"` | `5.58"` | `5.0"` | `0.34"` | Pretendard 400, **25pt** | `#8BB8AE` |
-| **Presenter name (BR, bottom)** | `7.5093"` | `5.9904"` | `5.0"` | `0.38"` | Pretendard 700, **27pt** | White `#FFFFFF` |
-| **Conference + date (BL)** | `0.2977"` | `6.9752"` | `6.0"` | `0.42"` | Pretendard 400, **16pt** | `#8BB8AE` |
+| **Logo** | `SW − 1.2887"` (right-anchored) | `0.0"` | `1.2887"` | `0.8519"` | — | transparent PNG |
+| **Label pill** | `0.6"` | `1.11"` | `3.5"` | `0.49"` | Pretendard 700, **14pt** | White `#FFFFFF` on Green Accent fill |
+| **Main title** | `0.6"` | `2.0512"` | `12.2953"` | `1.4909"` | Pretendard 700, **40pt** | White `#FFFFFF` |
+| **Subtitle (study descriptor)** | `0.663"` | `4.0517"` | `9.0"` | `0.3029"` | Pretendard 700, **18pt** | `#B3D4CB` |
+| **Green accent line** | `0.6"` | `3.7593"` | `1.8"` | `0.04"` | — | Green Accent `#00754A` |
+| **Affiliation (BR, top)** | `7.509"` | `5.58"` | `5.5"` | `0.3029"` | Pretendard 400, **18pt** _(inferred — unset in GSC2026, renders at PowerPoint default)_ | `#8BB8AE` |
+| **Presenter name (BR, bottom)** | `7.509"` | `5.99"` | `5.5"` | `0.4712"` | Pretendard 700, **28pt** | White `#FFFFFF` |
+| **Conference + date (BL)** | `0.2977"` | `6.9752"` | `8.0"` | `0.2356"` | Pretendard 400, **14pt** | `#8BB8AE` |
 
 **Fixed presenter values (always pre-fill):**
 - Affiliation: `분당서울대학교병원 정형외과`
@@ -226,7 +224,7 @@ House Green (#1E3932)    ← Final closing slide bookend
 | Token | Value | Role |
 |---|---|---|
 | **Text Black** | `rgba(0,0,0,0.87)` | Primary body text, table values, axis labels |
-| **Text Soft** | `rgba(0,0,0,0.58)` | Secondary text, captions, footnotes, subtitle zone |
+| **Text Soft** | `rgba(0,0,0,0.58)` | Secondary text, captions, footnotes |
 | **Text White** | `rgba(255,255,255,1.0)` | Headline / body on SK Dark bands |
 | **Text White Soft** | `rgba(255,255,255,0.70)` | Secondary / caption on dark surfaces |
 
@@ -256,10 +254,9 @@ No other typefaces. Pretendard is universal across all slide types.
 
 | Role | Size | Weight | Line Height | Letter Spacing | Color | Notes |
 |---|---|---|---|---|---|---|
-| **Cover Title** | **54pt** | 700 | 1.20 | `-0.01em` | `#FFFFFF` | Cover slide main title |
-| **Display** | **32pt** | 700 | 1.20 | `-0.01em` | `#006241` | Content slide headline zone (H1) |
-| **Cover Subtitle** | **20pt** | 700 | 1.45 | `-0.01em` | `#B3D4CB` | Cover study descriptor line |
-| **Subtitle** | 12pt | 500 | 1.45 | `-0.01em` | `rgba(0,0,0,0.58)` | Content slide subtitle zone |
+| **Cover Title** | **40pt** | 700 | 1.20 | `-0.01em` | `#FFFFFF` | Cover slide main title — 40pt fits a 2-line title; scale up toward 54pt for a short one-liner |
+| **Display** | **30pt** | 700 | 1.20 | `-0.01em` | `#006241` | Content slide headline zone (H1) |
+| **Cover Subtitle** | **18pt** | 700 | 1.45 | `-0.01em` | `#B3D4CB` | Cover study descriptor line |
 | **Body Large** | **24pt** | 700 | 32pt fixed | `-0.01em` | `#1F1F1F` | 본문 대제목 (level 0) — 단일 텍스트프레임 내 첫 번째 계층 |
 | **Body** | **20pt** | 400 | 32pt fixed | `-0.01em` | `#1F1F1F` | 서브불릿 (level 1) — `●` 앞에 Green Accent (`#00754A`) **11pt** bold |
 | **Body Detail** | **16pt** | 400 | 28pt fixed | `-0.01em` | `#6B6B6B` | 세부항목 (level 2) — `–` prefix, 회색 |
@@ -382,7 +379,7 @@ All patterns live strictly inside the body box (2.39"–6.85").
 Single high-impact message slide. Use sparingly: hook slides, transition slides between major sections, or a moment of pause before/after a major result.
 
 ```
-[ (Standard 5-zone skeleton — header strip + footer remain)         ]
+[ (Standard 4-zone skeleton — header strip + footer remain)         ]
 [                                                                    ]
 [                                                                    ]
 [              <ONE BIG LINE>     ← 54–64pt, weight 700              ]
@@ -469,12 +466,12 @@ Used for equivalence/non-inferiority RCT primary outcomes and meta-analytic comp
 
 ### Cover Slide
 - Background: **House Green (`#1E3932`)** full bleed
-- Title: Pretendard 700, **54pt**, White, `x:0.6" y:2.0775" w:9.0" h:1.8225"`
-- Study descriptor: Pretendard 700, **20pt**, `#B3D4CB`, `x:0.6" y:4.3" w:9.0" h:0.38"`
-- Label pill: Pretendard 700, **14pt**, White on Green Accent, `x:0.6" y:1.11" w:2.7874" h:0.49"`
-- Green accent line: `x:0.6" y:5.05" w:1.8" h:0.04"`, color `#00754A`
-- Affiliation (BR): **25pt**, `#8BB8AE`, `x:7.5093" y:5.58"`; Name (BR): **27pt**, White, `x:7.5093" y:5.9904"`
-- Conference + date (BL): **16pt**, `#8BB8AE`, `x:0.2977" y:6.9752"`
+- Title: Pretendard 700, **40pt**, White, `x:0.6" y:2.0512" w:12.2953" h:1.4909"` (40pt fits a 2-line title; a short one-line title can scale up toward 54pt)
+- Study descriptor: Pretendard 700, **18pt**, `#B3D4CB`, `x:0.663" y:4.0517" w:9.0" h:0.3029"`
+- Label pill: Pretendard 700, **14pt**, White on Green Accent, `x:0.6" y:1.11" w:3.5" h:0.49"`
+- Green accent line: `x:0.6" y:3.7593" w:1.8" h:0.04"`, color `#00754A`
+- Affiliation (BR): **18pt** (inferred — unset in GSC2026, PowerPoint default), `#8BB8AE`, `x:7.509" y:5.58"`; Name (BR): **28pt**, White, `x:7.509" y:5.99"`
+- Conference + date (BL): **14pt**, `#8BB8AE`, `x:0.2977" y:6.9752"`
 - SNUBH logo: `w:1.2887" h:0.8519"`, top-right anchored
 - No header strip, no footer strip
 
@@ -488,17 +485,17 @@ Used for equivalence/non-inferiority RCT primary outcomes and meta-analytic comp
 
 ### Standard Content Slide
 - Background: **Neutral Warm (`#f2f0eb`)**
-- Five-zone locked skeleton (see §0 — use measured coordinates)
-- Headline: Starbucks Green (`#006241`), Pretendard 700, **32pt**, at `x:0.2752" y:0.4771" w:11.0" h:0.50"`
+- Four-zone locked skeleton (see §0 — use measured coordinates)
+- Headline: Starbucks Green (`#006241`), Pretendard 700, **30pt**, at `x:0.2752" y:0.4771" w:12.0" h:0.50"`
 - Body: White card at `x:0.2752" y:1.4111" w:12.7946" h:5.7167"`, 12px radius, whisper shadow
 - Header chapter name: `x:0.1512" y:0.135"`, Pretendard 600, 11pt, `#8e8e93`
 
 ### Conclusion Content Slide
 
-A **Conclusion slide** that carries actual conclusion content (pillars, summary table, three-bullet take-home) is a **standard content slide**, NOT a Closing / Thank You slide. It uses the Neutral Warm canvas, full 5-zone skeleton, and a body card that holds the conclusion structure.
+A **Conclusion slide** that carries actual conclusion content (pillars, summary table, three-bullet take-home) is a **standard content slide**, NOT a Closing / Thank You slide. It uses the Neutral Warm canvas, full 4-zone skeleton, and a body card that holds the conclusion structure.
 
 - Background: **Neutral Warm (`#f2f0eb`)** — not House Green
-- 5-zone skeleton: full (header strip, headline, subtitle, body card, footer)
+- 4-zone skeleton: full (header strip, headline, body card, footer)
 - Header chapter name: `CONCLUSION`
 - Headline (Starbucks Green): the conclusion claim itself
 - Body card contents: pillar cards (see Pattern H), take-home strip, or summary visualization
@@ -559,7 +556,7 @@ Switching a Conclusion slide to the House Green full-bleed design (below) reads 
 - Don't color the comparator group bar/line in Adverse Red just because its outcome looks worse — that misuses Red as a "good vs bad" binary instead of "event annotation"
 - Don't apply extra letter-spacing (e.g., `+0.05em`) to header strip caps — keep it at the universal `-0.01em`
 - Don't leave the bottom 30% of the body box empty
-- Don't let content invade header strip, subtitle zone, or footer clearance
+- Don't let content invade header strip or footer clearance
 - Don't introduce gradient fills — color-block throughout
 - Don't use pure black for body text — use `rgba(0,0,0,0.87)`
 - Don't stack a single heavy shadow
