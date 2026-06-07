@@ -34,7 +34,11 @@ look). Always use the two together.
 > - **Minimal-fill aesthetic:** boxes/cards/pills are **outline or no-fill** (color via thin border
 >   or text), **no shadows**. **Charts keep their color.** Cover/divider/closing use the **light
 >   Neutral-Warm (`#f2f0eb`) canvas** (not House-Green). Keep the white body card.
-> - **Podium sizing:** axis labels and small chart text **≥ 12pt**; never < 9pt.
+> - **Podium sizing (size UP — projected to an auditorium):** headline 32pt; body bullets
+>   level 0/1/2 = **28 / 24 / 20pt**; chart title 18pt; axis/data labels 15pt; KPI number 40–46pt;
+>   captions, legends, badges, KPI labels all **≥ 12pt**. **Nothing on-slide below 12pt** except the
+>   footer/page-number chrome (11pt). Prefer fewer items at large sizes over cramming small text —
+>   if it won't fit at these sizes, split the slide. Match the §3 type scale in `design.md` exactly.
 > - **Presenter defaults (fixed):** 발표자 **박상민**, 소속 **분당서울대학교병원 정형외과**.
 > - Pick the **single best body pattern (A–I, §3)** per slide. Don't overfill — respect the body card
 >   bounds; if content is thin, use a density tactic (side panel, key-takeaway strip), never padding.
@@ -114,7 +118,7 @@ Only include `body` fields the chosen pattern uses. Keep all text terse.
 - [ ] Each data point is **visualized**, not narrated; ≤ 2 visuals/slide.
 - [ ] Correct **pattern** chosen per slide; body fits the card (no overflow, not >30% empty).
 - [ ] **Minimal fill**: outline/no-fill boxes, no shadows; **charts keep color**.
-- [ ] Chart text **≥ 12pt** (podium); source line present on every data slide.
+- [ ] Podium sizes applied (body 20–28pt, chart title 18pt, axis 15pt); **nothing on-slide < 12pt** (footer 11pt only); source line present on every data slide.
 - [ ] Greens used by role (headline = `#006241`, data = `#00754A`); **Gold only** for significance.
 - [ ] Presenter = **박상민 / 분당서울대학교병원 정형외과**; conference + date on cover.
 - [ ] Deck follows the **flow** (§2); Conclusion uses content layout; cover/divider/closing on the **light canvas**.

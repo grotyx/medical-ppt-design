@@ -55,11 +55,11 @@ Every slide must place these **four zones** at identical coordinates. Only the b
 
 | Zone | x | y | w | h | Contents | Style |
 |---|---|---|---|---|---|---|
-| **Header strip** | `0.1512"` | `0.135"` | `6.0"` (left) | `0.28"` | Chapter / section name (left), SNUBH logo (right) | Chapter: Pretendard 600, 11pt, `#8e8e93`, `-0.01em` (no extra tracking). Caps allowed in EN; do NOT apply additional `+0.05em` letter-spacing for caps. Logo: see Logo Integrity Rule |
+| **Header strip** | `0.1512"` | `0.135"` | `6.0"` (left) | `0.28"` | Chapter / section name (left), SNUBH logo (right) | Chapter: Pretendard 600, 13pt, `#8e8e93`, `-0.01em` (no extra tracking). Caps allowed in EN; do NOT apply additional `+0.05em` letter-spacing for caps. Logo: see Logo Integrity Rule |
 | **Headline zone** | `0.2752"` | `0.4771"` | `12.0"` | `0.50"` | Slide headline — one-sentence takeaway | Pretendard 700, **30pt**, `#006241` (Starbucks Green), line-height 1.20, letter-spacing `-0.01em` |
 | **Body box (white card)** | `0.2752"` | `1.4111"` | `12.7946"` | `5.7167"` | All body components — see §5 | White (`#ffffff`) card, 12px radius, **1px `#D9D9D9` outline, no shadow** |
-| **Footer — page number** | `0.1512"` | `7.24"` | `0.6"` | `0.25"` | Page number | Pretendard 500, 9pt, `#8e8e93` |
-| **Footer — source** | `7.1822"` | `7.2369"` | `6.0"` | `0.25"` | Source / footnote | Pretendard 400, 8pt, `#8e8e93`, right-aligned |
+| **Footer — page number** | `0.1512"` | `7.24"` | `0.6"` | `0.25"` | Page number | Pretendard 500, 11pt, `#8e8e93` |
+| **Footer — source** | `7.1822"` | `7.2369"` | `6.0"` | `0.25"` | Source / footnote | Pretendard 400, 12pt, `#8e8e93`, right-aligned |
 
 **Vertical rhythm (measured gaps):**
 - Header strip → Headline: ≈0.34" gap (header bottom at ~0.415", headline top at 0.4771")
@@ -127,9 +127,9 @@ The cover slide uses the **Neutral Warm (`#f2f0eb`)** light canvas with the foll
 
 | Level | Prefix | Size | Weight | Color |
 | --- | --- | --- | --- | --- |
-| 0 (대제목) | 없음 | **24pt** | 700 | `#1F1F1F` |
-| 1 (서브불릿) | `●` Green Accent (`#00754A`) **11pt** bold | **20pt** | 400 | `#1F1F1F` |
-| 2 (세부항목) | `–` | **16pt** | 400 | `#6B6B6B` |
+| 0 (대제목) | 없음 | **28pt** | 700 | `#1F1F1F` |
+| 1 (서브불릿) | `●` Green Accent (`#00754A`) **13pt** bold | **24pt** | 400 | `#1F1F1F` |
+| 2 (세부항목) | `–` | **20pt** | 400 | `#6B6B6B` |
 
 들여쓰기: level 1 → 0.25인치, level 2 → 0.50인치 (`marL` XML 직접 설정).
 
@@ -137,10 +137,10 @@ The cover slide uses the **Neutral Warm (`#f2f0eb`)** light canvas with the foll
 
 | 항목 | 값 |
 | --- | --- |
-| Line spacing (행간) | **28pt** fixed |
-| Space before — level 0 | **16pt** (첫 단락은 0pt) |
-| Space before — level 1 | **18pt** (불릿 항목 간 여백) |
-| Space before — level 2 | **10pt** |
+| Line spacing (행간) | **34pt** fixed |
+| Space before — level 0 | **18pt** (첫 단락은 0pt) |
+| Space before — level 1 | **20pt** (불릿 항목 간 여백) |
+| Space before — level 2 | **12pt** |
 
 ---
 
@@ -180,8 +180,8 @@ Whenever a slide carries data, comparison, process, or relationship — **visual
 **Constraints:**
 - Visualizations live strictly inside the body box (2.39"–6.85")
 - Maximum 1–2 visualizations per slide
-- Every chart must have: title (Pretendard 600 14pt), axis labels (Pretendard 400 10pt `rgba(0,0,0,0.58)`), source (Pretendard 400 9pt `#8e8e93`)
-- If font sizes would drop below 9pt, split the slide
+- Every chart must have: title (Pretendard 600 18pt), axis labels (Pretendard 400 15pt `rgba(0,0,0,0.58)`), source (Pretendard 400 12pt `#8e8e93`)
+- If font sizes would drop below **12pt**, split the slide (podium floor)
 
 ---
 
@@ -273,19 +273,21 @@ No other typefaces. Pretendard is universal across all slide types.
 | Role | Size | Weight | Line Height | Letter Spacing | Color | Notes |
 |---|---|---|---|---|---|---|
 | **Cover Title** | **40pt** | 700 | 1.20 | `-0.01em` | `#FFFFFF` | Cover slide main title — 40pt fits a 2-line title; scale up toward 54pt for a short one-liner |
-| **Display** | **30pt** | 700 | 1.20 | `-0.01em` | `#006241` | Content slide headline zone (H1) |
-| **Cover Subtitle** | **18pt** | 700 | 1.45 | `-0.01em` | `#B3D4CB` | Cover study descriptor line |
-| **Body Large** | **24pt** | 700 | 32pt fixed | `-0.01em` | `#1F1F1F` | 본문 대제목 (level 0) — 단일 텍스트프레임 내 첫 번째 계층 |
-| **Body** | **20pt** | 400 | 32pt fixed | `-0.01em` | `#1F1F1F` | 서브불릿 (level 1) — `●` 앞에 Green Accent (`#00754A`) **11pt** bold |
-| **Body Detail** | **16pt** | 400 | 28pt fixed | `-0.01em` | `#6B6B6B` | 세부항목 (level 2) — `–` prefix, 회색 |
-| **Chart Title** | 13pt | 600 | 1.20 | `-0.01em` | `rgba(0,0,0,0.87)` | Above every chart / diagram |
-| **Axis Label** | 9–10pt | 400 | 1.20 | `-0.01em` | `rgba(0,0,0,0.58)` | Chart axis text, table column headers |
-| **Caption / Source** | 8–9pt | 400 | 1.40 | `-0.01em` | `#8e8e93` | Source lines, footnotes |
-| **KPI Number** | 26–32pt | 700 | 1.0 | `-0.01em` | `#006241` | Large number in KPI tile |
-| **KPI Label** | 10pt | 500 | 1.30 | `-0.01em` | `rgba(0,0,0,0.58)` | Metric name beneath KPI number |
-| **Badge / Tag** | 9pt | 700 | 1.0 | `0.05em` | White or Gold | Pill badge labels (p-value, status) |
-| **Chapter Name** | 11pt | 600 | 1.0 | `-0.01em` | `#8e8e93` | Header strip left |
-| **Footer / Page** | 9–10pt | 500 | 1.0 | `-0.01em` | `#8e8e93` | Footer strip |
+| **Display** | **32pt** | 700 | 1.20 | `-0.01em` | `#006241` | Content slide headline zone (H1) |
+| **Cover Subtitle** | **18pt** | 700 | 1.45 | `-0.01em` | `#6B6B6B` | Cover study descriptor line |
+| **Body Large** | **28pt** | 700 | 34pt fixed | `-0.01em` | `#1F1F1F` | 본문 대제목 (level 0) — 단일 텍스트프레임 내 첫 번째 계층 |
+| **Body** | **24pt** | 400 | 34pt fixed | `-0.01em` | `#1F1F1F` | 서브불릿 (level 1) — `●` 앞에 Green Accent (`#00754A`) **13pt** bold |
+| **Body Detail** | **20pt** | 400 | 32pt fixed | `-0.01em` | `#6B6B6B` | 세부항목 (level 2) — `–` prefix, 회색 |
+| **Chart Title** | 18pt | 600 | 1.20 | `-0.01em` | `rgba(0,0,0,0.87)` | Above every chart / diagram |
+| **Axis Label** | 15pt | 400 | 1.20 | `-0.01em` | `rgba(0,0,0,0.58)` | Chart axis text, table column headers |
+| **Caption / Source** | 12pt | 400 | 1.40 | `-0.01em` | `#8e8e93` | Source lines, footnotes |
+| **KPI Number** | 40–46pt | 700 | 1.0 | `-0.01em` | `#006241` | Large number in KPI tile |
+| **KPI Label** | 14pt | 500 | 1.30 | `-0.01em` | `rgba(0,0,0,0.58)` | Metric name beneath KPI number |
+| **Badge / Tag** | 13pt | 700 | 1.0 | `-0.01em` | Green/Gold (text) | Pill badge labels (p-value, status) |
+| **Chapter Name** | 13pt | 600 | 1.0 | `-0.01em` | `#8e8e93` | Header strip left |
+| **Footer / Page** | 11pt | 500 | 1.0 | `-0.01em` | `#8e8e93` | Footer strip (chrome) |
+
+> **Podium floor:** no on-slide content/data text below **12pt** (chart axis/labels, captions, KPI labels, badges all ≥12pt). Only the footer/page-number chrome may sit at 11pt. This is a projection deck — when in doubt, size up.
 
 ### Principles
 
@@ -316,10 +318,10 @@ No other typefaces. Pretendard is universal across all slide types.
 - **Axis lines:** `1px solid rgba(0,0,0,0.14)`
 - **Plot area background:** `#ffffff`
 - **Slide background behind chart:** `#f2f0eb`
-- **Data labels:** Pretendard 10pt 600 — white on dark bars, Text Black on light bars
+- **Data labels:** Pretendard 14pt 600 — white on dark bars, Text Black on light bars
 - **Chart border-radius:** `4px` on bars where renderer supports it
-- **Legend:** Pretendard 10pt 400, `rgba(0,0,0,0.58)`, below or right of chart
-- **P-value badge:** Gold pill — Pretendard 10pt 700, `#cba258` border, transparent fill, `50px` pill radius
+- **Legend:** Pretendard 13pt 400, `rgba(0,0,0,0.58)`, below or right of chart
+- **P-value badge:** Gold pill — Pretendard 13pt 700, `#cba258` border, no fill, `50px` pill radius
 
 ### Two-Arm Comparison — Color Mapping Rule
 
@@ -334,17 +336,17 @@ For clinical comparisons between an *intervention* and a *comparator* (e.g., nov
 
 **Visual contrast tip:** when both bars are green tones (intervention green-accent, comparator starbucks-green), distinguish them by *length* and *labels*, not by chromatic opposition. The contrast comes from the magnitude of the data, not from a "good vs bad" color binary. If chromatic differentiation is essential, use House Green (`#1E3932`) as the comparator instead of Starbucks Green.
 
-### Axis Label Size — Context-Dependent
+### Axis Label Size — Podium (default)
 
-The 9–10pt baseline in the Type Scale (Axis Label) applies to **dense reading documents** (e.g., printed reports viewed up close). For **podium presentation** decks projected to an auditorium, raise axis labels to **at least 12pt**, with key tick values (equivalence margins, primary thresholds) at **13–14pt 700** to read from the back row. The same minimum applies to forest-plot point estimates, p-value pills, and small legend text — none should drop below 12pt in presentation context.
+The Type Scale is **podium-sized by default** (axis labels 15pt, chart title 18pt) — this is a deck projected to an auditorium. Keep key tick values (equivalence margins, primary thresholds) at **15–16pt 700** to read from the back row. **Nothing on a chart drops below 12pt** — forest-plot point estimates, p-value pills, and legend text all stay ≥12pt. If a dense chart cannot fit at these sizes, **split the slide** rather than shrink the text.
 
 ### KPI Tile Spec
 
 Container:      Flat white (#ffffff), 1px #D9D9D9 outline, no shadow, no top accent bar
-KPI Number:     **40pt**, Pretendard 700, #006241
-KPI Label:      **12pt**, Pretendard 400, #6B6B6B
-Delta badge:    **10pt** bold, White on Green Accent (positive) or Red (negative), pill shape w=0.72" h=0.24"
-Chart Title:    **16pt** bold, #1F1F1F
+KPI Number:     **40–46pt**, Pretendard 700, #006241
+KPI Label:      **14pt**, Pretendard 400, #6B6B6B
+Delta badge:    **13pt** bold, Green-Accent (positive) or Red (negative) text, outline pill w=0.72" h=0.24"
+Chart Title:    **18pt** bold, #1F1F1F
 Sparkline:      Green Accent stroke, no fill, 1.5px weight
 
 ---
@@ -354,12 +356,12 @@ Sparkline:      Green Accent stroke, no fill, 1.5px weight
 All patterns live strictly inside the body box (2.39"–6.85").
 
 ### Pattern A — Single Chart (Full Width)
-[ Chart Title — Pretendard 600 14pt rgba(0,0,0,0.87)       ]
+[ Chart Title — Pretendard 600 18pt rgba(0,0,0,0.87)       ]
 [ ──────────────────────────────────────────────────────── ]
 [                                                            ]
 [            Chart / Visualization                           ]
 [                                                            ]
-[ Source: _____ Pretendard 400 9pt #8e8e93                  ]
+[ Source: _____ Pretendard 400 12pt #8e8e93                 ]
 
 ### Pattern B — KPI Tiles Row + Chart
 [ KPI Tile ]  [ KPI Tile ]  [ KPI Tile ]  [ KPI Tile ]
@@ -380,14 +382,14 @@ All patterns live strictly inside the body box (2.39"–6.85").
 [ Source                                              ]
 
 ### Pattern E — Full-Width Table
-[ Table title — Pretendard 600 14pt                               ]
-[ Header row: Neutral Cool (#f9f9f9), Pretendard 600 10pt         ]
-[ Data rows: White / Ceramic alternating, Pretendard 400 10pt     ]
+[ Table title — Pretendard 600 18pt                               ]
+[ Header row: no fill, Pretendard 600 14pt, strong bottom rule    ]
+[ Data rows: no fill, Pretendard 400 14pt, hairline separators    ]
 [ Row hairlines: 1px solid #e7e7e7                                ]
-[ Source — Pretendard 400 9pt #8e8e93                             ]
+[ Source — Pretendard 400 12pt #8e8e93                            ]
 
 ### Pattern F — Stacked Insight Layers
-[ Band 1: Key Finding — Starbucks Green 700 14pt, thin top rule       ]
+[ Band 1: Key Finding — Starbucks Green 700 18pt, thin top rule       ]
 [ Band 2: Supporting chart or evidence (chart keeps its color)        ]
 [ Band 3: Takeaway / clinical implication — outline-separated, no fill ]
 
@@ -424,7 +426,7 @@ Three (occasionally two or four) parallel "pillars" summarizing a multi-dimensio
 [ │  BIG WORD │  │  BIG WORD │  │  BIG WORD │   ← 40–48pt headline  ]
 [ │  sub word │  │  sub word │  │  sub word │   ← 16–20pt subline   ]
 [ │           │  │           │  │           │                       ]
-[ │  short    │  │  short    │  │  short    │   ← 12–14pt body      ]
+[ │  short    │  │  short    │  │  short    │   ← 16–18pt body      ]
 [ │  body     │  │  body     │  │  body     │     (1–3 lines)       ]
 [ └───────────┘  └───────────┘  └───────────┘                       ]
 [                                                                    ]
@@ -433,10 +435,10 @@ Three (occasionally two or four) parallel "pillars" summarizing a multi-dimensio
 
 **Specs:**
 - Card container: flat white (`#ffffff`) or no-fill, 12px radius, **1px `#D9D9D9` outline, no shadow, no top accent bar**
-- Tag pill (centered horizontally near top): **outline in Green Accent + Green-Accent text (no fill)**, Pretendard 700 12–14pt, all caps
+- Tag pill (centered horizontally near top): **outline in Green Accent + Green-Accent text (no fill)**, Pretendard 700 13–15pt, all caps
 - Big word: Pretendard 700, **40–48pt**, Starbucks Green (`#006241`), centered, single line
 - Sub word: Pretendard 700, 16–20pt, Text Black, centered
-- Body text: Pretendard 400, 12–14pt, Text Body, centered, 1–3 lines
+- Body text: Pretendard 400, 16–18pt, Text Body, centered, 1–3 lines
 - Card spacing: equal gaps between cards (~0.18–0.22")
 - Optional: bottom take-home strip — **outline / no-fill, House-Green text** — unified take-home sentence
 
@@ -469,7 +471,7 @@ Used for equivalence/non-inferiority RCT primary outcomes and meta-analytic comp
 - CI end caps: short vertical caps at both ends, same color, 0.18–0.36" tall
 - Point estimate marker: filled diamond, 0.20–0.30" wide, in the arm accent color
 - Mean difference text (above CI bar): Pretendard 700, **15–17pt**, in arm accent color, format `+X.X (95% CI -Y.Y to +Z.Z)`
-- Axis tick labels: Pretendard, **11–13pt** (use 13pt 700 for margin ticks, 11pt 500 for other ticks); margin ticks colored Starbucks Green to call them out
+- Axis tick labels: Pretendard, **14–16pt** (use 16pt 700 for margin ticks, 14pt 500 for other ticks); margin ticks colored Starbucks Green to call them out
 - Axis caption (below all panels): Pretendard 500, 12pt, Text Soft, centered
 - P-value badge (right side of each panel): pill in arm accent color, white Pretendard 700 13–14pt, format `p = 0.XX`
 - Key takeaway strip (full-width band below): **outline (House-Green/Green-Accent border, no fill)**, House-Green text Pretendard 700 14–17pt, single sentence (e.g., "✓ Both 95% CIs lie within the ±margin")
@@ -483,7 +485,7 @@ A horizontal milestone track for study history, enrolment phases, or a research 
 - Rule line: thin **Green Accent (`#00754A`)** horizontal line across the body card (~`y3.6"`)
 - Milestones: filled `#00754A` dots (0.20–0.24") on the line; 3–6 evenly spaced
 - Year/label above each dot: Pretendard 700, 16–18pt, Starbucks Green (`#006241`)
-- Description below: Pretendard 400, 12pt, `#1F1F1F`, 1–2 short lines
+- Description below: Pretendard 400, 14pt, `#1F1F1F`, 1–2 short lines
 - Minimal: the line + dots carry all the color; **no boxes, no fill, no shadow**
 
 ### Pattern K — Process Flow (CONSORT)
@@ -493,7 +495,7 @@ Boxes-and-arrows flow for enrolment / patient flow (CONSORT) or a procedural seq
 - Stage boxes: **outline** rounded rects (`#00754A` 1–1.25px border, **no fill**), 3–5 across (~`y3.1"`)
 - In-box text: stage name Pretendard 700 14–15pt `#1F1F1F` + count Pretendard 400 13pt `#6B6B6B`
 - Connectors: filled `#00754A` right-arrows between boxes
-- Exclusions: a down-arrow to a small **gray-outline** note box (Pretendard 400 11pt `#6B6B6B`)
+- Exclusions: a down-arrow to a small **gray-outline** note box (Pretendard 400 12pt `#6B6B6B`)
 - Minimal: outline boxes + colored arrows only; **no fills, no shadow**
 
 ---
@@ -528,7 +530,7 @@ Boxes-and-arrows flow for enrolment / patient flow (CONSORT) or a procedural seq
 - Four-zone locked skeleton (see §0 — use measured coordinates)
 - Headline: Starbucks Green (`#006241`), Pretendard 700, **30pt**, at `x:0.2752" y:0.4771" w:12.0" h:0.50"`
 - Body: White card at `x:0.2752" y:1.4111" w:12.7946" h:5.7167"`, 12px radius, **1px `#D9D9D9` outline, no shadow**
-- Header chapter name: `x:0.1512" y:0.135"`, Pretendard 600, 11pt, `#8e8e93`
+- Header chapter name: `x:0.1512" y:0.135"`, Pretendard 600, 13pt, `#8e8e93`
 
 ### Conclusion Content Slide
 
@@ -585,7 +587,7 @@ comes from **hairline outlines** (`#D9D9D9` on white cards) and whitespace — n
 - Apply **`-0.01em` letter-spacing** universally (including header strip — no extra tracking for caps)
 - Reserve **Gold (`#cba258`) for statistical significance and clinical awards only**
 - For two-arm comparisons: **intervention = Green Accent**, **comparator = Starbucks Green** (or House Green if higher contrast needed). Reserve Adverse Red for the *event annotation itself*, not the comparator group
-- In presentation context, raise axis labels and small chart text to **≥12pt** (the 9–10pt baseline applies to dense reading documents only)
+- Keep all on-slide content/data text **≥12pt** (the type scale is podium-sized by default); split a slide rather than shrink below the floor
 - Keep surfaces **flat — no shadows**; separate with hairline outlines and whitespace
 - Keep all body content strictly inside 2.39"–6.85"
 - Visualize data as charts first
@@ -635,22 +637,22 @@ comes from **hairline outlines** (`#D9D9D9` on white cards) and whitespace — n
 ### Example Component Prompts
 
 **1. KPI tile row (4 tiles)**
-> "Row of 4 KPI tiles, each **flat white (`#ffffff`) 12px radius, 1px `#D9D9D9` outline, no shadow, no top accent bar**. Each tile: KPI number Pretendard 700 32pt `#006241`, label Pretendard 500 11pt `rgba(0,0,0,0.58)`, delta badge **outline** in Green Accent (positive) or Red (negative) 50px pill. Supporting chart below. Canvas Neutral Warm (`#f2f0eb`)."
+> "Row of 4 KPI tiles, each **flat white (`#ffffff`) 12px radius, 1px `#D9D9D9` outline, no shadow, no top accent bar**. Each tile: KPI number Pretendard 700 **40pt** `#006241`, label Pretendard 500 **14pt** `rgba(0,0,0,0.58)`, delta badge **outline** in Green Accent (positive) or Red (negative) 50px pill. Supporting chart below. Canvas Neutral Warm (`#f2f0eb`)."
 
 **2. Surgical outcome comparison chart**
-> "Grouped horizontal bar chart, two surgical cohorts, 4 outcome metrics. Primary series Green Accent (`#00754A`), secondary Starbucks Green (`#006241`). Chart title Pretendard 600 14pt. Axis labels Pretendard 400 10pt `rgba(0,0,0,0.58)`. Grid `1px solid #edebe9`. Plot area White. Significant bars annotated with Gold pill badge (`#cba258` border, 50px radius, 'p < 0.05' Pretendard 700 10pt gold)."
+> "Grouped horizontal bar chart, two surgical cohorts, 4 outcome metrics. Primary series Green Accent (`#00754A`), secondary Starbucks Green (`#006241`). Chart title Pretendard 600 18pt. Axis labels Pretendard 400 15pt `rgba(0,0,0,0.58)`. Grid `1px solid #edebe9`. Plot area White. Significant bars annotated with Gold pill badge (`#cba258` border, no fill, 50px radius, 'p < 0.05' Pretendard 700 13pt gold)."
 
 **3. Section divider slide**
 > "Section divider on the **Neutral Warm (`#f2f0eb`) light canvas**. Watermark number '02' Pretendard 700 48pt faint `#e8e5df` bottom-right. Section title Pretendard 700 26pt Starbucks Green (`#006241`) left-aligned vertically centered. Subtitle Pretendard 400 14pt `#6B6B6B`. SNUBH logo (standard) top-right. No fills, no shadow."
 
 **4. Study design timeline — Pattern C**
-> "Two-column Pattern C. Left (55%): claim Pretendard 600 13pt, 3 bullets Pretendard 400 11pt, Key Takeaway strip **outline / House-Green text** Pretendard 600 11pt. Right (45%): horizontal arrow-flow, 4 phase boxes **outline (Green-Accent border, no fill)** 12px-radius, arrows Green Accent. Canvas Neutral Warm."
+> "Two-column Pattern C. Left (55%): claim Pretendard 600 16pt, 3 bullets Pretendard 400 14pt, Key Takeaway strip **outline / House-Green text** Pretendard 600 14pt. Right (45%): horizontal arrow-flow, 4 phase boxes **outline (Green-Accent border, no fill)** 12px-radius, arrows Green Accent. Canvas Neutral Warm."
 
 **5. Outcome data table — Pattern E**
-> "6-column table, **minimal**: no row fills — separate rows with hairlines (`1px solid #e7e7e7`). Header Pretendard 600 10pt `#1F1F1F` with a stronger bottom rule (no header fill). Body Pretendard 400 10pt. Significant p-values: Gold pill (`#cba258` border, **no fill**, 50px). Title Pretendard 600 14pt above. Source Pretendard 400 9pt `#8e8e93` below."
+> "6-column table, **minimal**: no row fills — separate rows with hairlines (`1px solid #e7e7e7`). Header Pretendard 600 14pt `#1F1F1F` with a stronger bottom rule (no header fill). Body Pretendard 400 14pt. Significant p-values: Gold pill (`#cba258` border, **no fill**, 50px). Title Pretendard 600 18pt above. Source Pretendard 400 12pt `#8e8e93` below."
 
 **6. Pattern F — Stacked Insight Layers**
-> "Three stacked bands inside the body card, **outline-separated (no fills)**. Band 1 (Key Finding): Pretendard 700 14pt Starbucks Green (`#006241`), thin top rule. Band 2: grouped bar chart Green Accent + Starbucks Green (**chart keeps color**). Band 3 (clinical implication): Pretendard 500 12pt `rgba(0,0,0,0.87)`. No shadows."
+> "Three stacked bands inside the body card, **outline-separated (no fills)**. Band 1 (Key Finding): Pretendard 700 18pt Starbucks Green (`#006241`), thin top rule. Band 2: grouped bar chart Green Accent + Starbucks Green (**chart keeps color**). Band 3 (clinical implication): Pretendard 500 14pt `rgba(0,0,0,0.87)`. No shadows."
 
 **7. Closing / Thank You slide**
 > "Closing on the **Neutral Warm (`#f2f0eb`) light canvas**. 'Thank You' Pretendard 700 40pt Starbucks Green (`#006241`) centered. Presenter name/affiliation Pretendard 500 18pt `#1F1F1F`. Contact Pretendard 400 14pt `#6B6B6B`. SNUBH logo (standard) top-right. Flat, no fills."
