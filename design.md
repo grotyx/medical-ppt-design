@@ -218,7 +218,7 @@ House Green (#1E3932)    ← Final closing slide bookend
 | Token | Hex | RGB | Role in PPT |
 | --- | --- | --- | --- |
 | **Starbucks Green** | `#006241` | R0 G98 B65 | **Slide headlines**, data highlights, KPI numbers — primary brand signal |
-| **Green Accent** | `#00754A` | R0 G117 B74 | **Accent bars** (KPI tiles, body box top bar), bullet markers (●), chart primary series |
+| **Green Accent** | `#00754A` | R0 G117 B74 | **Outlines/borders** (cards, pills, KPI tiles), bullet markers (●), chart primary series, data highlights |
 | **House Green** | `#1E3932` | R30 G57 B50 | Cover, section divider, closing slide backgrounds (full-bleed dark bands) |
 | **Green Uplift** | `#2B5148` | R43 G81 B72 | Mid-tone dark accent panels, decorative overlay rectangles on dark backgrounds |
 
@@ -421,8 +421,8 @@ Three (occasionally two or four) parallel "pillars" summarizing a multi-dimensio
 
 ```
 [ ┌───────────┐  ┌───────────┐  ┌───────────┐                       ]
-[ │ [TAG]     │  │ [TAG]     │  │ [TAG]     │   ← top accent bar    ]
-[ │           │  │           │  │           │     + tag pill        ]
+[ │ ( TAG )   │  │ ( TAG )   │  │ ( TAG )   │   ← tag pill (outline)]
+[ │           │  │           │  │           │                       ]
 [ │  BIG WORD │  │  BIG WORD │  │  BIG WORD │   ← 40–48pt headline  ]
 [ │  sub word │  │  sub word │  │  sub word │   ← 16–20pt subline   ]
 [ │           │  │           │  │           │                       ]
@@ -430,18 +430,17 @@ Three (occasionally two or four) parallel "pillars" summarizing a multi-dimensio
 [ │  body     │  │  body     │  │  body     │     (1–3 lines)       ]
 [ └───────────┘  └───────────┘  └───────────┘                       ]
 [                                                                    ]
-[ ▌ Take-home strip — House Green, white text, full width             ]
+[ ▌ Take-home strip — outline, House-Green text, full width            ]
 ```
 
 **Specs:**
-- Card container: White (`#ffffff`), 12px radius, whisper shadow
-- Top accent bar: 0.08–0.10" tall, full card width, **Green Accent (`#00754A`)**
-- Tag pill (centered horizontally near top): Green Accent fill, white Pretendard 700 12–14pt, all caps
+- Card container: flat white (`#ffffff`) or no-fill, 12px radius, **1px `#D9D9D9` outline, no shadow, no top accent bar**
+- Tag pill (centered horizontally near top): **outline in Green Accent + Green-Accent text (no fill)**, Pretendard 700 12–14pt, all caps
 - Big word: Pretendard 700, **40–48pt**, Starbucks Green (`#006241`), centered, single line
 - Sub word: Pretendard 700, 16–20pt, Text Black, centered
 - Body text: Pretendard 400, 12–14pt, Text Body, centered, 1–3 lines
 - Card spacing: equal gaps between cards (~0.18–0.22")
-- Optional: bottom House-Green strip carrying a unified take-home sentence
+- Optional: bottom take-home strip — **outline / no-fill, House-Green text** — unified take-home sentence
 
 ### Pattern I — Forest Plot / Equivalence Plot
 
@@ -638,7 +637,7 @@ comes from **hairline outlines** (`#D9D9D9` on white cards) and whitespace — n
 ### Example Component Prompts
 
 **1. KPI tile row (4 tiles)**
-> "Row of 4 KPI tiles, each White (`#ffffff`) 12px radius, shadow `0 0 0.5px rgba(0,0,0,0.14), 0 1px 1px rgba(0,0,0,0.24)`. Each tile: 4px top accent bar Green Accent (`#00754A`), KPI number Pretendard 700 32pt `#006241`, label Pretendard 500 11pt `rgba(0,0,0,0.58)`, delta badge white on Green Accent (positive) or Red (negative) 50px pill. Supporting chart below. Canvas Neutral Warm (`#f2f0eb`)."
+> "Row of 4 KPI tiles, each **flat white (`#ffffff`) 12px radius, 1px `#D9D9D9` outline, no shadow, no top accent bar**. Each tile: KPI number Pretendard 700 32pt `#006241`, label Pretendard 500 11pt `rgba(0,0,0,0.58)`, delta badge **outline** in Green Accent (positive) or Red (negative) 50px pill. Supporting chart below. Canvas Neutral Warm (`#f2f0eb`)."
 
 **2. Surgical outcome comparison chart**
 > "Grouped horizontal bar chart, two surgical cohorts, 4 outcome metrics. Primary series Green Accent (`#00754A`), secondary Starbucks Green (`#006241`). Chart title Pretendard 600 14pt. Axis labels Pretendard 400 10pt `rgba(0,0,0,0.58)`. Grid `1px solid #edebe9`. Plot area White. Significant bars annotated with Gold pill badge (`#cba258` border, 50px radius, 'p < 0.05' Pretendard 700 10pt gold)."
@@ -647,7 +646,7 @@ comes from **hairline outlines** (`#D9D9D9` on white cards) and whitespace — n
 > "Full-bleed House Green (`#1E3932`). Watermark number '02' Pretendard 700 48pt `rgba(255,255,255,0.14)` bottom-right. Section title Pretendard 700 26pt White left-aligned vertically centered. Subtitle Pretendard 400 14pt `rgba(255,255,255,0.70)`. SNUBH logo white variant top-right."
 
 **4. Study design timeline — Pattern C**
-> "Two-column Pattern C. Left (55%): claim Pretendard 600 13pt, 3 bullets Pretendard 400 11pt, Key Takeaway strip House Green fill White Pretendard 600 11pt. Right (45%): horizontal arrow-flow, 4 phase boxes White 12px-radius Green Accent 4px top bar, arrows Green Accent. Canvas Neutral Warm."
+> "Two-column Pattern C. Left (55%): claim Pretendard 600 13pt, 3 bullets Pretendard 400 11pt, Key Takeaway strip **outline / House-Green text** Pretendard 600 11pt. Right (45%): horizontal arrow-flow, 4 phase boxes **outline (Green-Accent border, no fill)** 12px-radius, arrows Green Accent. Canvas Neutral Warm."
 
 **5. Outcome data table — Pattern E**
 > "6-column table. Header: Neutral Cool (`#f9f9f9`) Pretendard 600 10pt. Rows: White/Ceramic alternating Pretendard 400 10pt. Significant p-values: Gold pill (`#cba258` border, transparent fill, 50px). Hairlines `1px solid #e7e7e7`. Title Pretendard 600 14pt above. Source Pretendard 400 9pt `#8e8e93` below."
