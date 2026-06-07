@@ -4,6 +4,26 @@
 
 ## 0. Production Constraints (Read First)
 
+### Design Direction — Minimal & Light (CURRENT)
+
+> **This box overrides any legacy styling described later** (House-Green dark bands, whisper
+> shadows, filled tiles/pills). When in conflict, follow these rules.
+
+- **Minimal fill:** containers, cards, pills, and boxes are **outline or no-fill** — express color
+  through a **thin border or the text itself**, not a background fill. No card top-accent bars.
+- **Charts keep their color.** Data marks (bars, dots, lines, margin bands, KPI numbers) stay
+  colored per the chart palette (§4). Only *containers* lose their fill, never the data.
+- **Flat — no shadows.** Remove all drop/soft shadows and theme effects (§7 is superseded).
+- **Light canvas everywhere.** Cover, section divider, and closing use the **Neutral Warm
+  (`#f2f0eb`)** canvas like content slides — **not** a House-Green full-bleed. House Green
+  (`#1E3932`) is retained only as a chart/accent color, not a background.
+- **Keep:** the white body card (now a flat `#ffffff` panel, hairline outline, no shadow).
+- **Letter-spacing** is the spec's `-0.01em` applied **proportionally** — in PowerPoint set run
+  `spc = -1 × (font pt)` centipoints (e.g., 14pt → `-14`). Do **not** use a flat `-100` (-1pt);
+  it crushes small text.
+
+---
+
 ### Output Format
 
 - **16:9 slides only** — PowerPoint standard **13.333" × 7.5"**, reference resolution **1920 × 1080 px**. No other aspect ratios are valid output.
@@ -37,7 +57,7 @@ Every slide must place these **four zones** at identical coordinates. Only the b
 |---|---|---|---|---|---|---|
 | **Header strip** | `0.1512"` | `0.135"` | `6.0"` (left) | `0.28"` | Chapter / section name (left), SNUBH logo (right) | Chapter: Pretendard 600, 11pt, `#8e8e93`, `-0.01em` (no extra tracking). Caps allowed in EN; do NOT apply additional `+0.05em` letter-spacing for caps. Logo: see Logo Integrity Rule |
 | **Headline zone** | `0.2752"` | `0.4771"` | `12.0"` | `0.50"` | Slide headline — one-sentence takeaway | Pretendard 700, **30pt**, `#006241` (Starbucks Green), line-height 1.20, letter-spacing `-0.01em` |
-| **Body box (white card)** | `0.2752"` | `1.4111"` | `12.7946"` | `5.7167"` | All body components — see §5 | White (`#ffffff`) card, 12px radius, whisper shadow |
+| **Body box (white card)** | `0.2752"` | `1.4111"` | `12.7946"` | `5.7167"` | All body components — see §5 | White (`#ffffff`) card, 12px radius, **1px `#D9D9D9` outline, no shadow** |
 | **Footer — page number** | `0.1512"` | `7.24"` | `0.6"` | `0.25"` | Page number | Pretendard 500, 9pt, `#8e8e93` |
 | **Footer — source** | `7.1822"` | `7.2369"` | `6.0"` | `0.25"` | Source / footnote | Pretendard 400, 8pt, `#8e8e93`, right-aligned |
 
@@ -55,11 +75,11 @@ Every slide must place these **four zones** at identical coordinates. Only the b
 
 **Logo file:** `logo.png` (SNUH — Seoul National University Bundang Hospital). Original size 1536×1024 px, aspect ratio 3:2. Background is fully transparent (RGBA, alpha=0 on all background pixels) — place directly on any slide color without a backing box.
 
-**Placement — unified across ALL slide types (measured from slide 2, May 2026):**
-- `x: 12.0447", y: 0.0", w: 1.2887", h: 0.8519"` — identical on cover, section dividers, and content slides
-- Aspect ratio ≈ 3:2 preserved. Do not vary size or position between slide types.
+**Placement — unified across ALL slide types (measured from GSC2026, June 2026):**
+- `x: 11.7545", y: 0.0131", w: 1.5788", h: 0.8733"` — identical on cover, section dividers, and content slides
+- **Standard crop applied:** left 3.24%, right 16.36%, top 21.39%, bottom 11.33% — trims the logo's built-in whitespace so the mark sits larger and tighter in the top-right corner. Displayed box aspect ≈ 1.81 (the cropped region, not stretched).
 
-**Rules:** Original proportions, original colors, alpha preserved. Do NOT add shadows, glows, borders, frames, recoloring, gradients, or background fills. Do NOT crop, stretch, skew, rotate, or duplicate. Never place an opaque box behind the logo.
+**Rules:** Original colors and alpha preserved. Apply only the **standard crop above** (trims transparent margins) — do NOT stretch, skew, rotate, recolor, or duplicate. Do NOT add shadows, glows, borders, frames, gradients, or background fills. Never place an opaque box behind the logo.
 
 ---
 
@@ -82,7 +102,7 @@ The cover slide uses a full-bleed **House Green (`#1E3932`)** background with th
 
 | Zone | x | y | w | h | Font | Color |
 |---|---|---|---|---|---|---|
-| **Logo** | `SW − 1.2887"` (right-anchored) | `0.0"` | `1.2887"` | `0.8519"` | — | transparent PNG |
+| **Logo** | `SW − 1.5788"` (right-anchored) | `0.0131"` | `1.5788"` | `0.8733"` | — | transparent PNG (standard crop) |
 | **Label pill** | `0.6"` | `1.11"` | `3.5"` | `0.49"` | Pretendard 700, **14pt** | White `#FFFFFF` on Green Accent fill |
 | **Main title** | `0.6"` | `2.0512"` | `12.2953"` | `1.4909"` | Pretendard 700, **40pt** | White `#FFFFFF` |
 | **Subtitle (study descriptor)** | `0.663"` | `4.0517"` | `9.0"` | `0.3029"` | Pretendard 700, **18pt** | `#B3D4CB` |
@@ -179,7 +199,7 @@ Pretendard with universal `-0.01em` tracking reads confident and precise — app
 - Pretendard with tight `-0.01em` letter-spacing as the universal voice
 - Full-pill badges (`50px` radius) for callout labels and status indicators
 - 12px card/container radius for all box components
-- Whisper-soft layered shadows — never a single heavy drop shadow
+- Flat surfaces — **no shadows**; separation via hairline outlines + whitespace (see §0)
 
 **Slide color-band rhythm:**
 
@@ -322,8 +342,7 @@ The 9–10pt baseline in the Type Scale (Axis Label) applies to **dense reading 
 
 ### KPI Tile Spec
 
-Container:      White (#ffffff), shadow
-Top accent bar: 0.06" × full width, Green Accent (#00754A)
+Container:      Flat white (#ffffff), 1px #D9D9D9 outline, no shadow, no top accent bar
 KPI Number:     **40pt**, Pretendard 700, #006241
 KPI Label:      **12pt**, Pretendard 400, #6B6B6B
 Delta badge:    **10pt** bold, White on Green Accent (positive) or Red (negative), pill shape w=0.72" h=0.24"
@@ -460,9 +479,33 @@ Used for equivalence/non-inferiority RCT primary outcomes and meta-analytic comp
 
 **When to use:** equivalence/non-inferiority trials where the audience needs to *see* that the CI is inside the margin band, not just read a p-value. The visual proof IS the slide.
 
+### Pattern J — Timeline (Milestone Track)
+
+A horizontal milestone track for study history, enrolment phases, or a research program over time.
+
+- Rule line: thin **Green Accent (`#00754A`)** horizontal line across the body card (~`y3.6"`)
+- Milestones: filled `#00754A` dots (0.20–0.24") on the line; 3–6 evenly spaced
+- Year/label above each dot: Pretendard 700, 16–18pt, Starbucks Green (`#006241`)
+- Description below: Pretendard 400, 12pt, `#1F1F1F`, 1–2 short lines
+- Minimal: the line + dots carry all the color; **no boxes, no fill, no shadow**
+
+### Pattern K — Process Flow (CONSORT)
+
+Boxes-and-arrows flow for enrolment / patient flow (CONSORT) or a procedural sequence.
+
+- Stage boxes: **outline** rounded rects (`#00754A` 1–1.25px border, **no fill**), 3–5 across (~`y3.1"`)
+- In-box text: stage name Pretendard 700 14–15pt `#1F1F1F` + count Pretendard 400 13pt `#6B6B6B`
+- Connectors: filled `#00754A` right-arrows between boxes
+- Exclusions: a down-arrow to a small **gray-outline** note box (Pretendard 400 11pt `#6B6B6B`)
+- Minimal: outline boxes + colored arrows only; **no fills, no shadow**
+
 ---
 
 ## 6. Slide Type Specifications
+
+> **Note:** Per §0 (Minimal & Light), the **Cover, Section Divider, and Closing now use the Neutral
+> Warm (`#f2f0eb`) light canvas** with Starbucks-Green / dark text — not the House-Green full-bleed.
+> Treat the House-Green backgrounds and white-on-dark text described below as **legacy**.
 
 ### Cover Slide
 - Background: **House Green (`#1E3932`)** full bleed
@@ -472,7 +515,7 @@ Used for equivalence/non-inferiority RCT primary outcomes and meta-analytic comp
 - Green accent line: `x:0.6" y:3.7593" w:1.8" h:0.04"`, color `#00754A`
 - Affiliation (BR): **18pt** (inferred — unset in GSC2026, PowerPoint default), `#8BB8AE`, `x:7.509" y:5.58"`; Name (BR): **28pt**, White, `x:7.509" y:5.99"`
 - Conference + date (BL): **14pt**, `#8BB8AE`, `x:0.2977" y:6.9752"`
-- SNUBH logo: `w:1.2887" h:0.8519"`, top-right anchored
+- SNUBH logo: `w:1.5788" h:0.8733"` (standard crop), top-right anchored at `x:11.7545" y:0.0131"`
 - No header strip, no footer strip
 
 ### Section Divider Slide
@@ -515,13 +558,16 @@ Switching a Conclusion slide to the House Green full-bleed design (below) reads 
 
 ## 7. Depth & Elevation
 
-| Level | Shadow | Use |
-|---|---|---|
-| **Card** | `0 0 0.5px rgba(0,0,0,0.14), 0 1px 1px rgba(0,0,0,0.24)` | KPI tiles, body containers, table cards |
-| **Float badge** | `0 2px 6px rgba(0,0,0,0.18)` | Floating annotation callouts, pill badges |
-| **Chart container** | `0 1px 3px rgba(0,0,0,0.10), 0 0 2px rgba(0,0,0,0.07)` | Chart area lifted off slide canvas |
+**No shadows (flat).** Per the Minimal & Light direction (§0), the deck is shadow-free. Remove all
+drop/soft shadows and theme effects from cards, tiles, badges, and chart containers. Separation
+comes from **hairline outlines** (`#D9D9D9` on white cards) and whitespace — never elevation.
 
-**Philosophy:** Never a single heavy drop shadow. Stack 2–3 low-alpha shadows with different offsets.
+| Element | Treatment |
+|---|---|
+| **Card / container** | flat `#ffffff`, **1px `#D9D9D9` outline**, 12px radius, **no shadow** |
+| **KPI tile** | no fill or flat white, outline only, no top accent bar, no shadow |
+| **Pills / badges** | outline in the accent color + accent-colored text, no fill, no shadow |
+| **Chart area** | flat plot area, hairline grid (`#edebe9`), no container shadow |
 
 ### Border Radius Scale
 
@@ -543,7 +589,7 @@ Switching a Conclusion slide to the House Green full-bleed design (below) reads 
 - Reserve **Gold (`#cba258`) for statistical significance and clinical awards only**
 - For two-arm comparisons: **intervention = Green Accent**, **comparator = Starbucks Green** (or House Green if higher contrast needed). Reserve Adverse Red for the *event annotation itself*, not the comparator group
 - In presentation context, raise axis labels and small chart text to **≥12pt** (the 9–10pt baseline applies to dense reading documents only)
-- Layer 2–3 low-alpha shadows on cards
+- Keep surfaces **flat — no shadows**; separate with hairline outlines and whitespace
 - Keep all body content strictly inside 2.39"–6.85"
 - Visualize data as charts first
 - Use weight contrast (700 → 600 → 500 → 400) as the primary hierarchy signal
@@ -557,9 +603,9 @@ Switching a Conclusion slide to the House Green full-bleed design (below) reads 
 - Don't apply extra letter-spacing (e.g., `+0.05em`) to header strip caps — keep it at the universal `-0.01em`
 - Don't leave the bottom 30% of the body box empty
 - Don't let content invade header strip or footer clearance
-- Don't introduce gradient fills — color-block throughout
+- Don't fill containers/cards/pills — use **outline or no-fill** (color via border/text); no gradients
 - Don't use pure black for body text — use `rgba(0,0,0,0.87)`
-- Don't stack a single heavy shadow
+- Don't add **any shadows** — the deck is flat (§7); use outlines for separation
 - Don't mix or substitute typefaces
 - Don't place more than 2 visualizations on a single slide
 - Don't put Conclusion content on a House Green full-bleed slide — that layout is reserved for the standalone Thank You slide
@@ -619,11 +665,11 @@ Switching a Conclusion slide to the House Green full-bleed design (below) reads 
 3. ✅ Body card at `x:0.2752" y:1.4111" w:12.7946" h:5.7167"`; footer at `y:7.24"` — card must not overflow
 4. ✅ Pretendard `-0.01em` letter-spacing on all text
 5. ✅ Gold only for significance badges or awards — not as general accent
-6. ✅ Cards on White (`#ffffff`) with 2-layer soft shadow
+6. ✅ Cards flat white with 1px `#D9D9D9` hairline outline — **no shadow**
 7. ✅ Chart primary = Green Accent (`#00754A`); secondary = Starbucks Green (`#006241`)
-8. ✅ No single heavy shadow — always 2–3 low-alpha layers
+8. ✅ No shadows anywhere — flat surfaces, outlines + whitespace for separation
 9. ✅ Body box density rule observed — not more than 30% empty
-10. ✅ Cover / section dividers / closing → House Green full bleed only
+10. ✅ Cover / dividers / closing → Neutral Warm light canvas (not House-Green); flat, minimal
 
 ---
 
