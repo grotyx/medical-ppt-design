@@ -65,7 +65,7 @@ Every slide must place these **four zones** at identical coordinates. Only the b
 - Header strip → Headline: ≈0.34" gap (header bottom at ~0.415", headline top at 0.4771")
 - Headline → Body card: ≈0.43" gap (headline bottom ~0.977", card top 1.4111")
 
-**Lock rule:** Four zones do not move between slides. Override only for section dividers, full-bleed covers, and closing slides.
+**Lock rule:** Four zones do not move between slides. Override only for the cover, section dividers, and closing slides.
 
 **Hard boundary:** Body card runs 1.4111"–7.1278" (card top + height = 1.4111+5.7167). Footer clearance begins at ~7.24". Content must not overflow the white card.
 
@@ -96,7 +96,7 @@ These values are fixed across all slide decks. Do not substitute other names unl
 
 ### Cover Slide Layout
 
-The cover slide uses a full-bleed **House Green (`#1E3932`)** background with the following fixed zones.
+The cover slide uses the **Neutral Warm (`#f2f0eb`)** light canvas with the following fixed zones (see §0 — flat, no fills).
 
 > **⚠️ All coordinates measured from the final production file (GSC2026_full_modify_psm.pptx, slide 1, June 2026). Treat as ground truth.**
 
@@ -203,11 +203,9 @@ Pretendard with universal `-0.01em` tracking reads confident and precise — app
 
 **Slide color-band rhythm:**
 
-Neutral Warm (#f2f0eb)   ← Standard content slide background
-White (#ffffff)           ← Card / container surfaces within the slide
-House Green (#1E3932)    ← Section divider slides, closing slide
-Neutral Warm (#f2f0eb)   ← Returns for content slides after a divider
-House Green (#1E3932)    ← Final closing slide bookend
+Neutral Warm (#f2f0eb)   ← ALL slides — content, cover, section dividers, closing (one light canvas)
+White (#ffffff)           ← Body card / container surfaces (flat, 1px #D9D9D9 outline, no shadow)
+House Green (#1E3932)    ← Chart dark-accent series / deep accents only — never a slide background
 
 ---
 
@@ -219,7 +217,7 @@ House Green (#1E3932)    ← Final closing slide bookend
 | --- | --- | --- | --- |
 | **Starbucks Green** | `#006241` | R0 G98 B65 | **Slide headlines**, data highlights, KPI numbers — primary brand signal |
 | **Green Accent** | `#00754A` | R0 G117 B74 | **Outlines/borders** (cards, pills, KPI tiles), bullet markers (●), chart primary series, data highlights |
-| **House Green** | `#1E3932` | R30 G57 B50 | Cover, section divider, closing slide backgrounds (full-bleed dark bands) |
+| **House Green** | `#1E3932` | R30 G57 B50 | Chart dark-accent series and deep accents — **no longer a slide background** (cover/divider/closing are light, see §0) |
 | **Green Uplift** | `#2B5148` | R43 G81 B72 | Mid-tone dark accent panels, decorative overlay rectangles on dark backgrounds |
 
 ### Secondary & Accent
@@ -294,7 +292,7 @@ No other typefaces. Pretendard is universal across all slide types.
 - **Tight negative tracking (`-0.01em`)** applied universally — confident without feeling squeezed.
 - **Weight shifts carry hierarchy, not size shifts.** Weight (700 vs 600 vs 400) and color (Starbucks Green vs Text Black) separate levels.
 - **Body text never goes pure black** — `rgba(0,0,0,0.87)` matches the warm canvas temperature.
-- **Headline zone is always Starbucks Green (`#006241`)**. On House Green dark bands, switch to White.
+- **Headline zone is always Starbucks Green (`#006241`)** on the light canvas. (Only text placed *on* a dark chart band switches to White.)
 
 ---
 
@@ -389,9 +387,9 @@ All patterns live strictly inside the body box (2.39"–6.85").
 [ Source — Pretendard 400 9pt #8e8e93                             ]
 
 ### Pattern F — Stacked Insight Layers
-[ Band 1: House Green (#1E3932) — Key Finding, White 700 14pt       ]
-[ Band 2: Neutral Warm (#f2f0eb) — Supporting chart or evidence      ]
-[ Band 3: Green Light (#d4e9e2) — Takeaway / clinical implication    ]
+[ Band 1: Key Finding — Starbucks Green 700 14pt, thin top rule       ]
+[ Band 2: Supporting chart or evidence (chart keeps its color)        ]
+[ Band 3: Takeaway / clinical implication — outline-separated, no fill ]
 
 ### Pattern G — Big Message
 
@@ -413,7 +411,7 @@ Single high-impact message slide. Use sparingly: hook slides, transition slides 
 - Type: Pretendard 700, **54–64pt**, `#006241` (or `#00754A` for the punchline line)
 - Anchor: centered both axes within body card region (roughly y = 2.5"–5.5")
 - Sub-line (optional): Pretendard 500, **14–16pt italic**, `rgba(0,0,0,0.58)`, below main lines, centered
-- Background remains Neutral Warm; do NOT switch to House Green for emphasis — that role belongs to the Closing slide
+- Background remains Neutral Warm and flat; do NOT add a dark band or fill for emphasis — weight, size, and color carry it
 
 ### Pattern H — Pillar Cards
 
@@ -458,11 +456,11 @@ Used for equivalence/non-inferiority RCT primary outcomes and meta-analytic comp
 [                                                                   ]
 [      Axis caption: variable difference (intervention − comp.)    ]
 [                                                                   ]
-[ ▌ Key takeaway strip — House Green or Green Accent fill          ]
+[ ▌ Key takeaway strip — outline, House-Green/Green-Accent text     ]
 ```
 
 **Specs:**
-- Panel: white or Neutral Cool (`#f9f9f9`) fill, 8–12px radius, ~2.2" tall, full width
+- Panel: **outline / no-fill** (1px `#D9D9D9`), 8–12px radius, ~2.2" tall, full width
 - Panel left accent bar: 0.08" wide, full panel height, in the arm-specific accent color
 - Equivalence margin band: shaded rectangle from −margin to +margin, fill **Green Light (`#d4e9e2`)**, spanning ~80% of panel height vertically
 - Margin boundary lines: thin vertical lines at ±margin, **Starbucks Green (`#006241`)**, 0.012"–0.016" wide
@@ -474,7 +472,7 @@ Used for equivalence/non-inferiority RCT primary outcomes and meta-analytic comp
 - Axis tick labels: Pretendard, **11–13pt** (use 13pt 700 for margin ticks, 11pt 500 for other ticks); margin ticks colored Starbucks Green to call them out
 - Axis caption (below all panels): Pretendard 500, 12pt, Text Soft, centered
 - P-value badge (right side of each panel): pill in arm accent color, white Pretendard 700 13–14pt, format `p = 0.XX`
-- Key takeaway strip (full-width band below): House Green or Green Accent fill, white Pretendard 700 14–17pt, single sentence (e.g., "✓ Both 95% CIs lie within the ±margin")
+- Key takeaway strip (full-width band below): **outline (House-Green/Green-Accent border, no fill)**, House-Green text Pretendard 700 14–17pt, single sentence (e.g., "✓ Both 95% CIs lie within the ±margin")
 
 **When to use:** equivalence/non-inferiority trials where the audience needs to *see* that the CI is inside the margin band, not just read a p-value. The visual proof IS the slide.
 
@@ -504,32 +502,32 @@ Boxes-and-arrows flow for enrolment / patient flow (CONSORT) or a procedural seq
 
 > **Note:** Per §0 (Minimal & Light), the **Cover, Section Divider, and Closing now use the Neutral
 > Warm (`#f2f0eb`) light canvas** with Starbucks-Green / dark text — not the House-Green full-bleed.
-> Treat the House-Green backgrounds and white-on-dark text described below as **legacy**.
+> The per-slide specs below reflect this light treatment.
 
 ### Cover Slide
-- Background: **House Green (`#1E3932`)** full bleed
-- Title: Pretendard 700, **40pt**, White, `x:0.6" y:2.0512" w:12.2953" h:1.4909"` (40pt fits a 2-line title; a short one-line title can scale up toward 54pt)
-- Study descriptor: Pretendard 700, **18pt**, `#B3D4CB`, `x:0.663" y:4.0517" w:9.0" h:0.3029"`
-- Label pill: Pretendard 700, **14pt**, White on Green Accent, `x:0.6" y:1.11" w:3.5" h:0.49"`
+- Background: **Neutral Warm (`#f2f0eb`)** light canvas (flat, no fills — see §0)
+- Title: Pretendard 700, **40pt**, Starbucks Green (`#006241`), `x:0.6" y:2.0512" w:12.2953" h:1.4909"` (40pt fits a 2-line title; a short one-line title can scale up toward 54pt)
+- Study descriptor: Pretendard 700, **18pt**, `#6B6B6B`, `x:0.663" y:4.0517" w:9.0" h:0.3029"`
+- Label pill: Pretendard 700, **14pt**, White on Green Accent fill (the one filled accent kept on the cover), `x:0.6" y:1.11" w:3.5" h:0.49"`
 - Green accent line: `x:0.6" y:3.7593" w:1.8" h:0.04"`, color `#00754A`
-- Affiliation (BR): **18pt** (inferred — unset in GSC2026, PowerPoint default), `#8BB8AE`, `x:7.509" y:5.58"`; Name (BR): **28pt**, White, `x:7.509" y:5.99"`
-- Conference + date (BL): **14pt**, `#8BB8AE`, `x:0.2977" y:6.9752"`
+- Affiliation (BR): **18pt** (inferred — unset in GSC2026), `#6B6B6B`, `x:7.509" y:5.58"`; Name (BR): **28pt**, `#1F1F1F`, `x:7.509" y:5.99"`
+- Conference + date (BL): **14pt**, `#6B6B6B`, `x:0.2977" y:6.9752"`
 - SNUBH logo: `w:1.5788" h:0.8733"` (standard crop), top-right anchored at `x:11.7545" y:0.0131"`
 - No header strip, no footer strip
 
 ### Section Divider Slide
-- Background: **House Green (`#1E3932`)** full bleed
-- Watermark section number: Pretendard 700, 48pt, `rgba(255,255,255,0.14)`, bottom-right
-- Section title: Pretendard 700, 26pt, White, left-aligned, vertically centered
-- Section subtitle: Pretendard 400, 14pt, `rgba(255,255,255,0.70)`
-- SNUBH logo: white variant, top-right
+- Background: **Neutral Warm (`#f2f0eb`)** light canvas (flat, no fills — see §0)
+- Watermark section number: Pretendard 700, 48pt, faint `#e8e5df`, bottom-right
+- Section title: Pretendard 700, 26pt, Starbucks Green (`#006241`), left-aligned, vertically centered
+- Section subtitle: Pretendard 400, 14pt, `#6B6B6B`
+- SNUBH logo: standard (top-right)
 - No body box content
 
 ### Standard Content Slide
 - Background: **Neutral Warm (`#f2f0eb`)**
 - Four-zone locked skeleton (see §0 — use measured coordinates)
 - Headline: Starbucks Green (`#006241`), Pretendard 700, **30pt**, at `x:0.2752" y:0.4771" w:12.0" h:0.50"`
-- Body: White card at `x:0.2752" y:1.4111" w:12.7946" h:5.7167"`, 12px radius, whisper shadow
+- Body: White card at `x:0.2752" y:1.4111" w:12.7946" h:5.7167"`, 12px radius, **1px `#D9D9D9` outline, no shadow**
 - Header chapter name: `x:0.1512" y:0.135"`, Pretendard 600, 11pt, `#8e8e93`
 
 ### Conclusion Content Slide
@@ -543,15 +541,15 @@ A **Conclusion slide** that carries actual conclusion content (pillars, summary 
 - Body card contents: pillar cards (see Pattern H), take-home strip, or summary visualization
 - Footer: page number + source line as usual
 
-Switching a Conclusion slide to the House Green full-bleed design (below) reads as "Thank you" to the audience and dilutes the conclusion content. Keep them visually separated.
+Switching a Conclusion slide to the standalone Thank-You closing layout reads as "Thank you" to the audience and dilutes the conclusion content. Keep them visually separated.
 
 ### Closing / Thank You Slide
 - Use **only as the standalone final slide**, after the Conclusion content slide
-- Background: **House Green (`#1E3932`)** full bleed
-- Headline: White, Pretendard 700, 28pt
-- Affiliation / contact: Pretendard 400, 11–12pt, `rgba(255,255,255,0.70)`
-- SNUBH logo: white variant, top-right
-- If your acknowledgements list is long, prefer a **standard content slide with "Acknowledgements" chapter name + "Thank you" headline** instead of cramming text onto the dark band
+- Background: **Neutral Warm (`#f2f0eb`)** light canvas (flat, no fills — see §0)
+- Headline: Starbucks Green (`#006241`), Pretendard 700, 28pt
+- Affiliation / contact: Pretendard 400, 11–12pt, `#6B6B6B`
+- SNUBH logo: standard (top-right)
+- If your acknowledgements list is long, prefer a **standard content slide with "Acknowledgements" chapter name + "Thank you" headline**
 
 ---
 
@@ -583,7 +581,7 @@ comes from **hairline outlines** (`#D9D9D9` on white cards) and whitespace — n
 
 ### Do ✓
 - Use **Neutral Warm (`#f2f0eb`)** as the standard slide canvas
-- Map greens correctly: **Starbucks Green for headlines · Green Accent for data highlights · House Green for deep bands**
+- Map greens correctly: **Starbucks Green for headlines · Green Accent for data highlights & outlines · House Green as a chart dark-accent (not a background)**
 - Apply **`-0.01em` letter-spacing** universally (including header strip — no extra tracking for caps)
 - Reserve **Gold (`#cba258`) for statistical significance and clinical awards only**
 - For two-arm comparisons: **intervention = Green Accent**, **comparator = Starbucks Green** (or House Green if higher contrast needed). Reserve Adverse Red for the *event annotation itself*, not the comparator group
@@ -607,7 +605,7 @@ comes from **hairline outlines** (`#D9D9D9` on white cards) and whitespace — n
 - Don't add **any shadows** — the deck is flat (§7); use outlines for separation
 - Don't mix or substitute typefaces
 - Don't place more than 2 visualizations on a single slide
-- Don't put Conclusion content on a House Green full-bleed slide — that layout is reserved for the standalone Thank You slide
+- Don't merge Conclusion content into the standalone Thank-You closing slide — keep them separate
 - Don't ship a presentation deck with axis labels < 12pt; they will not read from the back of the room
 
 ---
@@ -620,7 +618,7 @@ comes from **hairline outlines** (`#D9D9D9` on white cards) and whitespace — n
 |---|---|
 | Slide canvas | `#f2f0eb` (Neutral Warm) |
 | Card / container | `#ffffff` (White) |
-| Deep band / divider | `#1E3932` (House Green) |
+| Chart dark accent | `#1E3932` (House Green) — not a background |
 | Headline text | `#006241` (Starbucks Green) |
 | Headline text on dark | `rgba(255,255,255,1.0)` |
 | Data highlight | `#00754A` (Green Accent) |
@@ -643,23 +641,23 @@ comes from **hairline outlines** (`#D9D9D9` on white cards) and whitespace — n
 > "Grouped horizontal bar chart, two surgical cohorts, 4 outcome metrics. Primary series Green Accent (`#00754A`), secondary Starbucks Green (`#006241`). Chart title Pretendard 600 14pt. Axis labels Pretendard 400 10pt `rgba(0,0,0,0.58)`. Grid `1px solid #edebe9`. Plot area White. Significant bars annotated with Gold pill badge (`#cba258` border, 50px radius, 'p < 0.05' Pretendard 700 10pt gold)."
 
 **3. Section divider slide**
-> "Full-bleed House Green (`#1E3932`). Watermark number '02' Pretendard 700 48pt `rgba(255,255,255,0.14)` bottom-right. Section title Pretendard 700 26pt White left-aligned vertically centered. Subtitle Pretendard 400 14pt `rgba(255,255,255,0.70)`. SNUBH logo white variant top-right."
+> "Section divider on the **Neutral Warm (`#f2f0eb`) light canvas**. Watermark number '02' Pretendard 700 48pt faint `#e8e5df` bottom-right. Section title Pretendard 700 26pt Starbucks Green (`#006241`) left-aligned vertically centered. Subtitle Pretendard 400 14pt `#6B6B6B`. SNUBH logo (standard) top-right. No fills, no shadow."
 
 **4. Study design timeline — Pattern C**
 > "Two-column Pattern C. Left (55%): claim Pretendard 600 13pt, 3 bullets Pretendard 400 11pt, Key Takeaway strip **outline / House-Green text** Pretendard 600 11pt. Right (45%): horizontal arrow-flow, 4 phase boxes **outline (Green-Accent border, no fill)** 12px-radius, arrows Green Accent. Canvas Neutral Warm."
 
 **5. Outcome data table — Pattern E**
-> "6-column table. Header: Neutral Cool (`#f9f9f9`) Pretendard 600 10pt. Rows: White/Ceramic alternating Pretendard 400 10pt. Significant p-values: Gold pill (`#cba258` border, transparent fill, 50px). Hairlines `1px solid #e7e7e7`. Title Pretendard 600 14pt above. Source Pretendard 400 9pt `#8e8e93` below."
+> "6-column table, **minimal**: no row fills — separate rows with hairlines (`1px solid #e7e7e7`). Header Pretendard 600 10pt `#1F1F1F` with a stronger bottom rule (no header fill). Body Pretendard 400 10pt. Significant p-values: Gold pill (`#cba258` border, **no fill**, 50px). Title Pretendard 600 14pt above. Source Pretendard 400 9pt `#8e8e93` below."
 
 **6. Pattern F — Stacked Insight Layers**
-> "Three bands inside body box. Band 1: House Green (`#1E3932`) fill, White Pretendard 700 14pt. Band 2: Neutral Warm fill, grouped bar chart Green Accent + Starbucks Green. Band 3: Green Light (`#d4e9e2`) fill, Pretendard 500 12pt `rgba(0,0,0,0.87)` clinical implication."
+> "Three stacked bands inside the body card, **outline-separated (no fills)**. Band 1 (Key Finding): Pretendard 700 14pt Starbucks Green (`#006241`), thin top rule. Band 2: grouped bar chart Green Accent + Starbucks Green (**chart keeps color**). Band 3 (clinical implication): Pretendard 500 12pt `rgba(0,0,0,0.87)`. No shadows."
 
 **7. Closing / Thank You slide**
-> "Full-bleed House Green (`#1E3932`). 'Thank You' Pretendard 700 40pt White centered. Presenter name/affiliation Pretendard 500 18pt `rgba(255,255,255,0.70)`. Contact Pretendard 400 14pt `rgba(255,255,255,0.58)`. SNUBH logo white variant top-right."
+> "Closing on the **Neutral Warm (`#f2f0eb`) light canvas**. 'Thank You' Pretendard 700 40pt Starbucks Green (`#006241`) centered. Presenter name/affiliation Pretendard 500 18pt `#1F1F1F`. Contact Pretendard 400 14pt `#6B6B6B`. SNUBH logo (standard) top-right. Flat, no fills."
 
 ### Iteration Checklist
 
-1. ✅ Headline in Starbucks Green (`#006241`) — or White on House Green slides
+1. ✅ Headline in Starbucks Green (`#006241`) on the light canvas (all slide types)
 2. ✅ Slide canvas is Neutral Warm (`#f2f0eb`) — not pure white
 3. ✅ Body card at `x:0.2752" y:1.4111" w:12.7946" h:5.7167"`; footer at `y:7.24"` — card must not overflow
 4. ✅ Pretendard `-0.01em` letter-spacing on all text
@@ -677,7 +675,7 @@ comes from **hairline outlines** (`#D9D9D9` on white cards) and whitespace — n
 - **Pretendard availability:** Ensure Pretendard is installed on all presentation machines. Embed font in PPTX export settings.
 - **SoDoSans equivalence:** Pretendard substitutes for Starbucks' proprietary SoDoSans. The `-0.01em` tracking reads well in Pretendard; try `-0.005em` at very small sizes (9–10pt) if it looks too tight.
 - **Chart renderer limitations:** PowerPoint's native chart engine does not support `border-radius` on bars. For rounded bar aesthetics, use an external renderer (Python matplotlib/seaborn export) and embed as image inside the body box.
-- **Gold pill badges on charts:** Use a floating text box with `#cba258` fill and manual pill rounding in PowerPoint.
-- **Logo white variant:** Prepare white-recolored SNUBH logo PNG in advance — do not recolor inside PowerPoint.
+- **Gold pill badges on charts:** Use a floating text box with `#cba258` **border (no fill)** and manual pill rounding in PowerPoint.
+- **Logo:** Use the standard SNUBH logo on every slide — all slide types are now the light canvas, so no white-variant logo is needed.
 - **Transitions:** Use PowerPoint "Fade" (0.3s) as the closest equivalent to the web reference's `0.2s ease`. Avoid decorative morph/wipe transitions.
 - **Korean/Latin mixed text:** Verify `-0.01em` does not negatively affect Korean glyph spacing at 9–10pt; adjust to `0em` for Korean-only small-body passages if needed.
