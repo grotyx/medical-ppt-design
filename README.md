@@ -2,7 +2,7 @@
 
 A production-ready design system for academic medical presentations, built for the **Spine division at Seoul National University Bundang Hospital (SNUBH)**. It pairs a complete written specification with a reference PowerPoint deck so that every slide — cover, section divider, content, conclusion, closing — uses identical zones, type, and color logic.
 
-The system is **Starbucks-inspired** (four-tier green architecture) but adapted for an academic surgical context: warm-neutral canvas, tight typography, evidence-first visualization, and locked layout coordinates measured from the actual production file.
+The system uses a **minimal, flat, light** treatment — no shadows, outline-not-fill containers, and a single warm-neutral canvas across every slide type (cover, divider, content, closing). Greens are used by role, Pretendard typography is sized for **podium projection**, data is visualized rather than narrated, and layout coordinates are locked — measured from the production deck.
 
 ---
 
@@ -10,23 +10,25 @@ The system is **Starbucks-inspired** (four-tier green architecture) but adapted 
 
 | File | Purpose |
 |---|---|
-| [`design.md`](./design.md) | The complete specification — color tokens, type scale, slide skeleton with exact coordinates, body box patterns (A–I), chart palette, do/don't rules, agent prompt guide. |
-| [`backbone_slides.pptx`](./backbone_slides.pptx) | Reference PowerPoint deck (16:9, 13.333" × 7.5"). Treat as the ground-truth template for cover, content, divider, and closing slides. |
+| [`design.md`](./design.md) | The complete specification — minimal/flat/light direction, color tokens, podium type scale, slide skeleton with exact coordinates, body-box patterns (A–L), chart palette, do/don't rules. |
+| [`slide-content-prompt.md`](./slide-content-prompt.md) | Authoring prompt + template — turns a paper/topic into a `design.md`-conformant slide plan (deck flow, pattern picker, per-slide template, checklist). |
+| [`backbone_slides.pptx`](./backbone_slides.pptx) | Reference PowerPoint deck (16:9, 15 slides). The ground-truth template — cover, divider, content patterns A–L, and the closing slide. |
 
 ---
 
 ## Design Principles
 
 - **16:9 only** — 13.333" × 7.5" (1920 × 1080 px reference). No other aspect ratios are valid output.
-- **Five locked zones** on every content slide: header strip, headline, subtitle, body card, footer. Coordinates do not move between slides.
-- **Four-tier green system** — each green has a distinct role, not interchangeable:
+- **Minimal, flat, light** — containers/cards/pills are **outline or no-fill** (color via thin border or text), **no shadows**, and **one warm-neutral (`#f2f0eb`) canvas** on every slide type. Charts keep their color; only containers lose fill.
+- **Four locked zones** on every content slide: header strip, headline, body card, footer. Coordinates do not move between slides. (The old subtitle zone was removed.)
+- **Greens by role** — not interchangeable:
   - `#006241` Starbucks Green — headlines, KPI numbers
-  - `#00754A` Green Accent — accents, bullets, primary chart series
-  - `#1E3932` House Green — cover, dividers, closing
-  - `#2B5148` Green Uplift — dark mid-tone overlays
-- **Gold (`#cba258`)** is reserved for statistical significance badges and clinical award moments — never a general accent.
-- **Pretendard** is the only typeface, with universal `-0.01em` letter-spacing. Hierarchy is carried by weight (700 / 500 / 400) and color, not by size jumps.
+  - `#00754A` Green Accent — accents, bullets, borders, primary chart series
+  - `#1E3932` House Green — **chart dark-accent only** (no longer a slide background)
+  - `#cba258` Gold — statistical-significance badges only, never a general accent
+- **Pretendard** is the only typeface, universal `-0.01em` letter-spacing (applied proportionally, not a flat value). **Podium-sized** type — body 20–28pt, headline 32pt, chart text ≥15pt, **hard floor 12pt** on-slide. Hierarchy is carried by weight and color as well as size.
 - **Visualization-first**: whenever a slide carries data, comparison, process, or relationship — visualize it; do not narrate it in prose.
+- **Editable text**: bullet/text content lives in **one text frame** as paragraphs (Pattern L), never one box per line.
 - **Density rule**: the body card must never be left half-empty. Use side panels, KPI rows, callout strips, or Pattern F (Stacked Insight Layers).
 
 ---
@@ -36,12 +38,11 @@ The system is **Starbucks-inspired** (four-tier green architecture) but adapted 
 | Zone | x | y | w | h |
 |---|---|---|---|---|
 | Header strip | 0.1512" | 0.135" | 6.0" (left) | 0.28" |
-| Headline | 0.2752" | 0.4771" | 11.0" | 0.50" |
-| Subtitle | 0.2752" | 1.0335" | 12.3" | 0.27" |
+| Headline | 0.2752" | 0.4771" | 12.0" | 0.50" |
 | Body card (white) | 0.2752" | 1.4111" | 12.7946" | 5.7167" |
 | Footer — page | 0.1512" | 7.24" | 0.6" | 0.25" |
 | Footer — source | 7.1822" | 7.2369" | 6.0" | 0.25" |
-| SNUBH logo | 12.0447" | 0.0" | 1.2887" | 0.8519" |
+| SNUBH logo | 11.7545" | 0.0131" | 1.5788" | 0.8733" (standard crop) |
 
 Body content lives strictly inside the white card (1.4111"–7.1278").
 
@@ -49,7 +50,7 @@ Body content lives strictly inside the white card (1.4111"–7.1278").
 
 ## Body Box Patterns
 
-The spec defines nine reusable body-box patterns:
+The spec defines twelve reusable body-box patterns:
 
 - **A** — Single Chart (Full Width)
 - **B** — KPI Tiles Row + Chart
@@ -60,6 +61,9 @@ The spec defines nine reusable body-box patterns:
 - **G** — Big Message
 - **H** — Pillar Cards
 - **I** — Forest Plot / Equivalence Plot
+- **J** — Timeline (Milestone Track)
+- **K** — Process Flow (CONSORT)
+- **L** — Text Block (single editable text frame — the default text-only layout)
 
 See [`design.md` §5](./design.md) for coordinates and usage rules.
 
@@ -83,16 +87,16 @@ It is **not** intended for:
 
 ## How to Use
 
-1. Open `backbone_slides.pptx` and use it as the template — do not move the five locked zones.
-2. Read `design.md` end-to-end once. Re-read §0 (Production Constraints) and §5 (Body Box Patterns) before every new deck.
-3. Match every slide's body content to one of Patterns A–I. If none fits, the slide content is probably trying to do too much — split it.
-4. When generating slides programmatically (e.g., via an LLM agent), pass `design.md` as the system prompt and reference the pattern by letter.
+1. Open `backbone_slides.pptx` and use it as the template — do not move the four locked zones.
+2. Read `design.md` end-to-end once. Re-read §0 (Production Constraints, incl. the Minimal & Light direction) and §5 (Body Box Patterns) before every new deck.
+3. Match every slide's body content to one of Patterns A–L. If none fits, the slide content is probably trying to do too much — split it.
+4. When generating slides from a paper or topic, use `slide-content-prompt.md` together with `design.md` — it produces a slide plan mapped to the patterns; then build on the backbone.
 
 ---
 
 ## Brand Assets
 
-- **Logo**: SNUBH (Seoul National University Bundang Hospital) — top-right of every slide. Transparent PNG, original proportions, no recoloring/shadows/borders.
+- **Logo**: SNUBH (Seoul National University Bundang Hospital) — top-right of every slide. Transparent PNG, original colors/alpha, a defined **standard crop** trims its whitespace; no recoloring, shadows, or borders.
 - **Font**: Pretendard (variable). Stack: `Pretendard, "Pretendard Variable", -apple-system, system-ui, sans-serif`.
 
 The logo file itself is not redistributed in this repository.
