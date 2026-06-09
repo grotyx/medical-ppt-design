@@ -25,7 +25,7 @@ look). Always use the two together.
 >
 > **Hard rules (from design.md):**
 > - **4-zone skeleton** on every standard content slide: Header chapter (top-left) · Headline
->   (Pretendard 700, **30pt**, Starbucks Green) · Body card (white) · Footer (page + source).
+>   (Pretendard 700, **32pt**, Starbucks Green) · Body card (white) · Footer (page + source).
 >   **There is NO subtitle line** — put the takeaway in the headline, not a subhead.
 > - **One headline = one sentence takeaway.** The headline states the *conclusion*, not the topic
 >   ("Equivalence achieved — in both diseases", not "Primary outcome").
@@ -122,7 +122,7 @@ Only include `body` fields the chosen pattern uses. Keep all text terse.
 
 ## 5. Pre-build checklist
 
-- [ ] Every headline is a **takeaway sentence**, Starbucks Green, 30pt — no subtitle line.
+- [ ] Every headline is a **takeaway sentence**, Starbucks Green, 32pt — no subtitle line.
 - [ ] Each data point is **visualized**, not narrated; ≤ 2 visuals/slide.
 - [ ] Correct **pattern** chosen per slide; body fits the card (no overflow, not >30% empty).
 - [ ] **Minimal fill**: outline/no-fill boxes, no shadows; **charts keep color**.

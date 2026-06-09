@@ -56,7 +56,7 @@ Every slide must place these **four zones** at identical coordinates. Only the b
 | Zone | x | y | w | h | Contents | Style |
 |---|---|---|---|---|---|---|
 | **Header strip** | `0.1512"` | `0.135"` | `6.0"` (left) | `0.28"` | Chapter / section name (left), SNUBH logo (right) | Chapter: Pretendard 600, 13pt, `#8e8e93`, `-0.01em` (no extra tracking). Caps allowed in EN; do NOT apply additional `+0.05em` letter-spacing for caps. Logo: see Logo Integrity Rule |
-| **Headline zone** | `0.2752"` | `0.4771"` | `12.0"` | `0.50"` | Slide headline — one-sentence takeaway | Pretendard 700, **30pt**, `#006241` (Starbucks Green), line-height 1.20, letter-spacing `-0.01em` |
+| **Headline zone** | `0.2752"` | `0.4771"` | `12.0"` | `0.50"` | Slide headline — one-sentence takeaway | Pretendard 700, **32pt**, `#006241` (Starbucks Green), line-height 1.20, letter-spacing `-0.01em` |
 | **Body box (white card)** | `0.2752"` | `1.4111"` | `12.7946"` | `5.7167"` | All body components — see §5 | White (`#ffffff`) card, 12px radius, **1px `#D9D9D9` outline, no shadow** |
 | **Footer — page number** | `0.1512"` | `7.24"` | `0.6"` | `0.25"` | Page number | Pretendard 500, 11pt, `#8e8e93` |
 | **Footer — source** | `7.1822"` | `7.2369"` | `6.0"` | `0.25"` | Source / footnote | Pretendard 400, 12pt, `#8e8e93`, right-aligned |
@@ -104,12 +104,12 @@ The cover slide uses the **Neutral Warm (`#f2f0eb`)** light canvas with the foll
 |---|---|---|---|---|---|---|
 | **Logo** | `SW − 1.5788"` (right-anchored) | `0.0131"` | `1.5788"` | `0.8733"` | — | transparent PNG (standard crop) |
 | **Label pill** | `0.6"` | `1.11"` | `3.5"` | `0.49"` | Pretendard 700, **14pt** | White `#FFFFFF` on Green Accent fill |
-| **Main title** | `0.6"` | `2.0512"` | `12.2953"` | `1.4909"` | Pretendard 700, **40pt** | White `#FFFFFF` |
-| **Subtitle (study descriptor)** | `0.663"` | `4.0517"` | `9.0"` | `0.3029"` | Pretendard 700, **18pt** | `#B3D4CB` |
+| **Main title** | `0.6"` | `2.0512"` | `12.2953"` | `1.4909"` | Pretendard 700, **40pt** | Starbucks Green `#006241` |
+| **Subtitle (study descriptor)** | `0.663"` | `4.0517"` | `9.0"` | `0.3029"` | Pretendard 700, **18pt** | `#6B6B6B` |
 | **Green accent line** | `0.6"` | `3.7593"` | `1.8"` | `0.04"` | — | Green Accent `#00754A` |
-| **Affiliation (BR, top)** | `7.509"` | `5.58"` | `5.5"` | `0.3029"` | Pretendard 400, **18pt** _(inferred — unset in GSC2026, renders at PowerPoint default)_ | `#8BB8AE` |
-| **Presenter name (BR, bottom)** | `7.509"` | `5.99"` | `5.5"` | `0.4712"` | Pretendard 700, **28pt** | White `#FFFFFF` |
-| **Conference + date (BL)** | `0.2977"` | `6.9752"` | `8.0"` | `0.2356"` | Pretendard 400, **14pt** | `#8BB8AE` |
+| **Affiliation (BR, top)** | `7.509"` | `5.58"` | `5.5"` | `0.3029"` | Pretendard 400, **18pt** _(inferred — unset in GSC2026)_ | `#6B6B6B` |
+| **Presenter name (BR, bottom)** | `7.509"` | `5.99"` | `5.5"` | `0.4712"` | Pretendard 700, **28pt** | Starbucks Green `#006241` |
+| **Conference + date (BL)** | `0.2977"` | `6.9752"` | `8.0"` | `0.2356"` | Pretendard 400, **14pt** | `#6B6B6B` |
 
 **Fixed presenter values (always pre-fill):**
 - Affiliation: `분당서울대학교병원 정형외과`
@@ -218,7 +218,7 @@ House Green (#1E3932)    ← Chart dark-accent series / deep accents only — ne
 | **Starbucks Green** | `#006241` | R0 G98 B65 | **Slide headlines**, data highlights, KPI numbers — primary brand signal |
 | **Green Accent** | `#00754A` | R0 G117 B74 | **Outlines/borders** (cards, pills, KPI tiles), bullet markers (●), chart primary series, data highlights |
 | **House Green** | `#1E3932` | R30 G57 B50 | Chart dark-accent series and deep accents — **no longer a slide background** (cover/divider/closing are light, see §0) |
-| **Green Uplift** | `#2B5148` | R43 G81 B72 | Mid-tone dark accent panels, decorative overlay rectangles on dark backgrounds |
+| **Green Uplift** | `#2B5148` | R43 G81 B72 | Mid-tone dark-green chart accent / overlay (not a slide background) |
 
 ### Secondary & Accent
 
@@ -243,8 +243,8 @@ House Green (#1E3932)    ← Chart dark-accent series / deep accents only — ne
 |---|---|---|
 | **Text Black** | `rgba(0,0,0,0.87)` | Primary body text, table values, axis labels |
 | **Text Soft** | `rgba(0,0,0,0.58)` | Secondary text, captions, footnotes |
-| **Text White** | `rgba(255,255,255,1.0)` | Headline / body on SK Dark bands |
-| **Text White Soft** | `rgba(255,255,255,0.70)` | Secondary / caption on dark surfaces |
+| **Text White** | `rgba(255,255,255,1.0)` | Text on a dark chart band/accent (e.g. House Green series) |
+| **Text White Soft** | `rgba(255,255,255,0.70)` | Secondary / caption on a dark chart surface |
 
 ### Semantic
 
@@ -272,7 +272,7 @@ No other typefaces. Pretendard is universal across all slide types.
 
 | Role | Size | Weight | Line Height | Letter Spacing | Color | Notes |
 |---|---|---|---|---|---|---|
-| **Cover Title** | **40pt** | 700 | 1.20 | `-0.01em` | `#FFFFFF` | Cover slide main title — 40pt fits a 2-line title; scale up toward 54pt for a short one-liner |
+| **Cover Title** | **40pt** | 700 | 1.20 | `-0.01em` | `#006241` | Cover slide main title (green on light canvas) — 40pt fits a 2-line title; scale up toward 54pt for a short one-liner |
 | **Display** | **32pt** | 700 | 1.20 | `-0.01em` | `#006241` | Content slide headline zone (H1) |
 | **Cover Subtitle** | **18pt** | 700 | 1.45 | `-0.01em` | `#6B6B6B` | Cover study descriptor line |
 | **Body Large** | **28pt** | 700 | 34pt fixed | `-0.01em` | `#1F1F1F` | 본문 대제목 (level 0) — 단일 텍스트프레임 내 첫 번째 계층 |
@@ -529,7 +529,7 @@ Type runs **larger than standard body** because text is the entire slide.
 - Study descriptor: Pretendard 700, **18pt**, `#6B6B6B`, `x:0.663" y:4.0517" w:9.0" h:0.3029"`
 - Label pill: Pretendard 700, **14pt**, White on Green Accent fill (the one filled accent kept on the cover), `x:0.6" y:1.11" w:3.5" h:0.49"`
 - Green accent line: `x:0.6" y:3.7593" w:1.8" h:0.04"`, color `#00754A`
-- Affiliation (BR): **18pt** (inferred — unset in GSC2026), `#6B6B6B`, `x:7.509" y:5.58"`; Name (BR): **28pt**, `#1F1F1F`, `x:7.509" y:5.99"`
+- Affiliation (BR): **18pt** (inferred — unset in GSC2026), `#6B6B6B`, `x:7.509" y:5.58"`; Name (BR): **28pt**, Starbucks Green `#006241`, `x:7.509" y:5.99"`
 - Conference + date (BL): **14pt**, `#6B6B6B`, `x:0.2977" y:6.9752"`
 - SNUBH logo: `w:1.5788" h:0.8733"` (standard crop), top-right anchored at `x:11.7545" y:0.0131"`
 - No header strip, no footer strip
@@ -545,7 +545,7 @@ Type runs **larger than standard body** because text is the entire slide.
 ### Standard Content Slide
 - Background: **Neutral Warm (`#f2f0eb`)**
 - Four-zone locked skeleton (see §0 — use measured coordinates)
-- Headline: Starbucks Green (`#006241`), Pretendard 700, **30pt**, at `x:0.2752" y:0.4771" w:12.0" h:0.50"`
+- Headline: Starbucks Green (`#006241`), Pretendard 700, **32pt**, at `x:0.2752" y:0.4771" w:12.0" h:0.50"`
 - Body: White card at `x:0.2752" y:1.4111" w:12.7946" h:5.7167"`, 12px radius, **1px `#D9D9D9` outline, no shadow**
 - Header chapter name: `x:0.1512" y:0.135"`, Pretendard 600, 13pt, `#8e8e93`
 
@@ -639,11 +639,11 @@ comes from **hairline outlines** (`#D9D9D9` on white cards) and whitespace — n
 | Card / container | `#ffffff` (White) |
 | Chart dark accent | `#1E3932` (House Green) — not a background |
 | Headline text | `#006241` (Starbucks Green) |
-| Headline text on dark | `rgba(255,255,255,1.0)` |
+| Text on a dark chart band | `rgba(255,255,255,1.0)` |
 | Data highlight | `#00754A` (Green Accent) |
 | Body text | `rgba(0,0,0,0.87)` |
 | Secondary / caption | `rgba(0,0,0,0.58)` |
-| Body text on dark | `rgba(255,255,255,0.70)` |
+| Caption on a dark chart band | `rgba(255,255,255,0.70)` |
 | Gold — significance / award | `#cba258` |
 | Chart primary series | `#00754A` |
 | Chart secondary series | `#006241` |
