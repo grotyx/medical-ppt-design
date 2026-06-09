@@ -498,6 +498,18 @@ Boxes-and-arrows flow for enrolment / patient flow (CONSORT) or a procedural seq
 - Exclusions: a down-arrow to a small **gray-outline** note box (Pretendard 400 12pt `#6B6B6B`)
 - Minimal: outline boxes + colored arrows only; **no fills, no shadow**
 
+### Pattern L — Text Block (single editable text frame)
+
+The **most-used** layout: a **text-only** slide. The whole body is **ONE text frame** with multiple
+paragraphs (press Enter for each line) — **never one text box per line**, so it stays easy to edit.
+Type runs **larger than standard body** because text is the entire slide.
+
+- One text frame filling the body card (≈ `x0.7" y1.7"`, full width inside the card); word-wrap on, no autofit
+- Native **● Green Accent (`#00754A`)** bullets with a hanging indent (wrapped lines align under the text)
+- Sizes (larger than §3 body): primary lines **28pt**, an emphasis line **32–36pt**, secondary/sub detail **24pt** `#6B6B6B`; line spacing ~1.18; ~14pt before each bullet; a blank paragraph between groups
+- Inline emphasis = **bold Green Accent (`#00754A`)** runs **within the paragraph** (not a new box)
+- Flat — no fill, no shadow. This is the canonical use of the §0 **Body Text Structure Rule**.
+
 ---
 
 ## 6. Slide Type Specifications

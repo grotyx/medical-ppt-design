@@ -40,7 +40,10 @@ look). Always use the two together.
 >   footer/page-number chrome (11pt). Prefer fewer items at large sizes over cramming small text —
 >   if it won't fit at these sizes, split the slide. Match the §3 type scale in `design.md` exactly.
 > - **Presenter defaults (fixed):** 발표자 **박상민**, 소속 **분당서울대학교병원 정형외과**.
-> - Pick the **single best body pattern (A–I, §3)** per slide. Don't overfill — respect the body card
+> - **Text/bullet content goes in ONE text frame as paragraphs** (Pattern L) — never one text box
+>   per line; it must stay editable. This text-only layout is the most common — use it by default
+>   unless the content calls for a chart/diagram pattern.
+> - Pick the **single best body pattern (A–L, §3)** per slide. Don't overfill — respect the body card
 >   bounds; if content is thin, use a density tactic (side panel, key-takeaway strip), never padding.
 >
 > **Output:** the **Deck Flow** (§2) as a numbered list, then one **Slide Block** (§4) per slide.
@@ -71,7 +74,7 @@ Interleave **Big Message (G)** slides as transitions between major sections (e.g
 
 ## 3. Pattern selection guide
 
-Choose ONE per slide. (A–I are defined in `design.md` §5.)
+Choose ONE per slide. (A–L are defined in `design.md` §5.)
 
 | Pattern | Use when the slide's job is… |
 |---|---|
@@ -86,6 +89,7 @@ Choose ONE per slide. (A–I are defined in `design.md` §5.)
 | **I** Forest / Equivalence Plot | equivalence/non-inferiority CIs that must be *seen* inside the margin |
 | **J** Timeline | a milestone track over time (study history, enrolment phases, research program) |
 | **K** Process Flow (CONSORT) | enrolment / patient flow or a procedural sequence (boxes + arrows) |
+| **L** Text Block | a **text-only** slide — ONE editable text frame, multiple bullet paragraphs, larger type (the most common layout) |
 
 ---
 
@@ -96,7 +100,7 @@ Choose ONE per slide. (A–I are defined in `design.md` §5.)
   section: <header chapter, e.g. RESULTS · EFFICACY>   # omit on cover/closing
   type: cover | big-message | content | closing
   headline: <one-sentence takeaway, ≤ ~60 chars>        # the conclusion, not the topic
-  pattern: <A–I, or timeline/flow>                       # content slides only
+  pattern: <A–L>                                         # content slides only
   body:
     # fill the fields the pattern needs — examples:
     kpis:      [{value: "0.0%", label: "Wound dehiscence", delta: "▼"}, ...]
