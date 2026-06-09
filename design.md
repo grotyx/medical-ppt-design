@@ -375,6 +375,10 @@ All patterns live strictly inside the body box (2.39"–6.85").
 [ Supporting bullets, Body       | with source below    ]
 [ "Key Takeaway" callout strip   |                      ]
 
+- **Left column = ONE text frame** (claim as level-0 paragraph, no bullet, ~26pt bold; supporting
+  points as ● Green-Accent bullet paragraphs ~18pt) — per the §0 Body Text Structure Rule, never
+  one box per line. Right column holds the chart/diagram; Key-Takeaway strip is its own element.
+
 ### Pattern D — Three KPI Tiles + Chart
 [ KPI Tile A    |   KPI Tile B    |   KPI Tile C    ]
 [ ─────────────────────────────────────────────────  ]
