@@ -510,7 +510,7 @@ Type runs **larger than standard body** because text is the entire slide.
 
 - One text frame filling the body card (≈ `x0.7" y1.7"`, full width inside the card); word-wrap on, no autofit
 - Native **● Green Accent (`#00754A`)** bullets with a hanging indent (wrapped lines align under the text)
-- Levels: lead/primary lines **28pt** with **● Green-Accent** bullets — **the dot is a fixed ~10pt** (a fixed point size, not a % of each line, so every dot is identical regardless of line size). An emphasis line **32–36pt** keeps the same ~10pt dot. **Smaller sub-detail is indented one level** (level 2 — `–` marker fixed ~9pt, deeper indent, **24pt** `#6B6B6B`) — keeps the hierarchy clean
+- Levels: lead/primary lines **28pt** with **● Green-Accent** bullets — **the dot is a fixed ~14pt** (≈50% of the primary text; a fixed point size, not a % of each line, so every dot is identical regardless of line size). An emphasis line **32–36pt** keeps the same ~14pt dot. **Smaller sub-detail is indented one level** (level 2 — `–` marker fixed ~12pt, deeper indent, **24pt** `#6B6B6B`) — keeps the hierarchy clean
 - Line spacing ~1.18; ~14pt before each bullet; a blank paragraph between groups
 - Inline emphasis = **bold Green Accent (`#00754A`)** runs **within the paragraph** (not a new box)
 - Flat — no fill, no shadow. This is the canonical use of the §0 **Body Text Structure Rule**.

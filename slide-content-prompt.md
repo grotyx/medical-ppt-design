@@ -44,9 +44,9 @@ look). Always use the two together.
 >   it unless the content is *genuinely* a chart, table, KPI, forest plot, timeline, or flow. Don't
 >   invent a visual where a clean text block is what the content actually is.
 > - **Text/bullet content goes in ONE text frame as paragraphs** — never one box per line (stay editable).
->   Use level structure: lead/primary lines **28pt** with **●** bullets — the dot a **fixed ~10pt** (a fixed
->   point size, not a % of each line, so every dot is identical) — and **indent smaller sub-detail one level**
->   (level 2 — `–` marker fixed ~9pt, deeper indent, **24pt** gray) for a clean hierarchy.
+>   Use level structure: lead/primary lines **28pt** with **●** bullets — the dot a **fixed ~14pt** (≈50% of
+>   the text; a fixed point size, not a % of each line, so every dot is identical) — and **indent smaller
+>   sub-detail one level** (level 2 — `–` marker fixed ~12pt, deeper indent, **24pt** gray) for a clean hierarchy.
 > - Pick the **single best body pattern (A–L, §3)** per slide. Don't overfill — respect the body card
 >   bounds; if content is thin, use a density tactic (side panel, key-takeaway strip), never padding.
 >
