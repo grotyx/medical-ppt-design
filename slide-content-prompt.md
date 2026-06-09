@@ -40,9 +40,12 @@ look). Always use the two together.
 >   footer/page-number chrome (11pt). Prefer fewer items at large sizes over cramming small text —
 >   if it won't fit at these sizes, split the slide. Match the §3 type scale in `design.md` exactly.
 > - **Presenter defaults (fixed):** 발표자 **박상민**, 소속 **분당서울대학교병원 정형외과**.
-> - **Text/bullet content goes in ONE text frame as paragraphs** (Pattern L) — never one text box
->   per line; it must stay editable. This text-only layout is the most common — use it by default
->   unless the content calls for a chart/diagram pattern.
+> - **Pattern L (text block) is the DEFAULT.** Most slides are text — reach for Pattern L first and use
+>   it unless the content is *genuinely* a chart, table, KPI, forest plot, timeline, or flow. Don't
+>   invent a visual where a clean text block is what the content actually is.
+> - **Text/bullet content goes in ONE text frame as paragraphs** — never one box per line (stay editable).
+>   Use level structure: lead/primary lines **28pt** with **●** bullets, and **indent smaller sub-detail
+>   one level** (level 2 — `–` marker, deeper indent, **24pt** gray) for a clean hierarchy.
 > - Pick the **single best body pattern (A–L, §3)** per slide. Don't overfill — respect the body card
 >   bounds; if content is thin, use a density tactic (side panel, key-takeaway strip), never padding.
 >
